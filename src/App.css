@@ -8,7 +8,7 @@ body {
   padding: 25px 50px 75px 100px;
 }
 
-.App-container {
+.App-toolbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -39,4 +39,10 @@ body {
 
 .App-title {
   text-shadow:1px 1px 2px rgb(209, 209, 209);
+}
+
+.App-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

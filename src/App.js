@@ -1,5 +1,6 @@
 import './App.css';
 import Checkboxes from './Checkboxes';
+import Resultbox from './Resultbox';
 
 
 function App() {
@@ -9,13 +10,13 @@ function App() {
     <div className="App-container">
     <div className="App-selectorbar"> User selects notes to filter by here.<br />
     <Checkboxes />
-    </div>  
-    <div class="App-item"> Filtered results show up in here. </div>
-    <div class="App-item"> .. and here. </div>
-    <div class="App-item"> Here too! </div>
-    <div class="App-item"> More filtered results. </div>
-    <div class="App-item"> You get the idea. </div>
-    <div class="App-item"> Resultssss. </div>
+    </div> 
+    <Resultbox />
+    <Resultbox />
+    <Resultbox />
+    <Resultbox />
+    <Resultbox />
+    <Resultbox />
     </div>
     </div>
   );

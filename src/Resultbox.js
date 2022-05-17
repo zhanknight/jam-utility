@@ -1,14 +1,14 @@
-import {scaleData} from './Scales.js'
 
-function Resultbox() {
-
+function Resultbox(props) {
 
     return (
-        <div class="App-item"> Filtered results show up in here. <br />
-        {scaleData[0].scale}<br />
-        {scaleData[0].notes}<br />
+        // just show me everything in the object right now
+        <div class="App-item"> <h3> RESULT: </h3><br />
+        {props.data.scale}<br />
+        {props.data.notes}<br />
+        {props.data.root}<br />
+        {props.data.type}<br />
         </div>
-
     )
 }
 

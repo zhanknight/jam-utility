@@ -12,11 +12,11 @@ export const scaleData = [
     },
     {
         "id": "2",
-        "scale": "C# Major",
+        "scale": "C#/Db Major",
         "root": "C#",
         "type": "Major",
         "notes": [
-            "C#", "D#", "E#", "F#", "G#", "A#", "B#"
+            "Db", "Eb", "F", "Gb", "Ab", "Bb", "C"
         ]
     },
     {
@@ -30,11 +30,11 @@ export const scaleData = [
     },
     {
         "id": "4",
-        "scale": "Db Major",
-        "root": "Db",
+        "scale": "D#/Eb Major",
+        "root": "D#",
         "type": "Major",
         "notes": [
-            "Db", "Eb", "F", "Gb", "Ab", "Bb", "C"
+            "Eb", "F", "G", "Ab", "Bb", "C", "D"
         ]
     },
     {
@@ -43,7 +43,7 @@ export const scaleData = [
         "root": "E",
         "type": "Major",
         "notes": [
-            "C", "D", "E", "F", "G", "A", "B"
+            "E", "F#", "G#", "A", "B", "C#", "D#"
         ]
     },
     {
@@ -52,16 +52,16 @@ export const scaleData = [
         "root": "F",
         "type": "Major",
         "notes": [
-            "C", "D", "E", "F", "G", "A", "B"
+            "F", "G", "A", "Bb", "C", "D", "E"
         ]
     },
     {
         "id": "7",
-        "scale": "F# Major",
+        "scale": "F#/Gb Major",
         "root": "F#",
         "type": "Major",
         "notes": [
-            "C", "D", "E", "F", "G", "A", "B"
+            "Gb", "Ab", "Bb", "Cb", "Db", "Eb", "F"
         ]
     },
     {
@@ -70,16 +70,16 @@ export const scaleData = [
         "root": "G",
         "type": "Major",
         "notes": [
-            "C", "D", "E", "F", "G", "A", "B"
+            "G", "A", "B", "C", "D", "E", "F#"
         ]
     },
     {
         "id": "9",
-        "scale": "G# Major",
+        "scale": "G#/Ab Major",
         "root": "G#",
         "type": "Major",
         "notes": [
-            "C", "D", "E", "F", "G", "A", "B"
+            "Ab", "Bb", "C", "Db", "Eb", "F", "G"
         ]
     },
     {
@@ -88,16 +88,16 @@ export const scaleData = [
         "root": "A",
         "type": "Major",
         "notes": [
-            "C", "D", "E", "F", "G", "A", "B"
+            "A", "B", "C#", "D", "E", "F#", "G#"
         ]
     },
     {
         "id": "11",
-        "scale": "A# Major",
+        "scale": "A#/Bb Major",
         "root": "A#",
         "type": "Major",
         "notes": [
-            "C", "D", "E", "F", "G", "A", "B"
+            "Bb", "C", "D", "Eb", "F", "G", "A"
         ]
     },
     {
@@ -106,7 +106,7 @@ export const scaleData = [
         "root": "B",
         "type": "Major",
         "notes": [
-            "C", "D", "E", "F", "G", "A", "B"
+            "B", "C#", "D#", "E", "F#", "G#", "A#"
         ]
     },
                     ];

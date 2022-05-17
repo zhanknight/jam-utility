@@ -1,15 +1,16 @@
 function Checkboxes() {
 
-    const notenames = ["a", "a#", "b", "c", "c#", "d,", "d#", "e", "f", "f#", "g", "g#"]
+    const notenames = ["A", "A#/Bb", "B", "C", "C#/Db", "D,", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"]
   
     return (
-        <div className="App-selectorbar"> User selects notes to filter by here.<br />
+        <div className="App-selectorbar"> <h3>User selects notes to filter by here.</h3><br />
 
      <div>
         {notenames.map(note => {
             return (
                 <>
-                <input key={note} type="checkbox" id={note} name={note} value={note} /> {note}
+                <input key={note} type="checkbox"/> 
+                <label htmlFor={note}>{note}</label>
                 </>  
             )
         }) }

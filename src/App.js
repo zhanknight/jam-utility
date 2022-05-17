@@ -1,25 +1,16 @@
 import './App.css';
 import Checkboxes from './Checkboxes';
-import Resultbox from './Resultbox';
+import Results from './Results';
 
 
 function App() {
   return (
     <div className="App">
-      <h2 className="App-title">Jam Utility: Filter Scales by Notes. </h2>
+    <h2 className="App-title">Jam Utility: Filter Scales by Notes. </h2>
     <div className="App-toolbar">
-    <div className="App-selectorbar"> User selects notes to filter by here.<br />
     <Checkboxes />
-    </div> 
     </div>
-    <div className="App-results">
-    <Resultbox />
-    <Resultbox />
-    <Resultbox />
-    <Resultbox />
-    <Resultbox />
-    <Resultbox />
-    </div>
+    <Results />
     </div>
   );
 }

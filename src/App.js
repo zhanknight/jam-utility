@@ -1,7 +1,10 @@
 import './App.css';
 import Checkboxes from './Checkboxes';
 import Results from './Results';
+import {scaleData} from './Scales.js'
 
+const filteredScaleData = scaleData.filter(stuff => {
+    return stuff.notes.includes('A');})
 
 function App() {
   return (
@@ -10,7 +13,7 @@ function App() {
     <div className="App-toolbar">
     <Checkboxes />
     </div>
-    <Results />
+    <Results data={filteredScaleData} />
     </div>
   );
 }
@@ -18,6 +21,6 @@ function App() {
 export default App;
 
 // implement checkbox functionality next
-// checked items filter the separate scales array and then map those to resultboxes in the results div
-
+// checked items filter the separate scales array as filteredScaleData
+// right now it's just hardcoded to filter for scales with note A
 

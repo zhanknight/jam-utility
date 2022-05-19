@@ -8,6 +8,7 @@ function Resultbox(props) {
         {props.data.notes}<br />
         {props.data.root}<br />
         {props.data.type}<br />
+        {props.data.display.toString()}
         </div>
     )
 }

@@ -3,6 +3,7 @@
 export const scaleData = [
     {
         "id": "1",
+        "display": true,
         "scale": "C Major",
         "root": "C",
         "type": "Major",
@@ -12,6 +13,7 @@ export const scaleData = [
     },
     {
         "id": "2",
+        "display": true,
         "scale": "C#/Db Major",
         "root": "C#",
         "type": "Major",
@@ -21,6 +23,7 @@ export const scaleData = [
     },
     {
         "id": "3",
+        "display": true,
         "scale": "D Major",
         "root": "D",
         "type": "Major",
@@ -30,6 +33,7 @@ export const scaleData = [
     },
     {
         "id": "4",
+        "display": true,
         "scale": "D#/Eb Major",
         "root": "D#",
         "type": "Major",
@@ -39,6 +43,7 @@ export const scaleData = [
     },
     {
         "id": "5",
+        "display": true,
         "scale": "E Major",
         "root": "E",
         "type": "Major",
@@ -48,6 +53,7 @@ export const scaleData = [
     },
     {
         "id": "6",
+        "display": true,
         "scale": "F Major",
         "root": "F",
         "type": "Major",
@@ -57,6 +63,7 @@ export const scaleData = [
     },
     {
         "id": "7",
+        "display": true,
         "scale": "F#/Gb Major",
         "root": "F#",
         "type": "Major",
@@ -66,6 +73,7 @@ export const scaleData = [
     },
     {
         "id": "8",
+        "display": true,
         "scale": "G Major",
         "root": "G",
         "type": "Major",
@@ -75,6 +83,7 @@ export const scaleData = [
     },
     {
         "id": "9",
+        "display": true,
         "scale": "G#/Ab Major",
         "root": "G#",
         "type": "Major",
@@ -84,6 +93,7 @@ export const scaleData = [
     },
     {
         "id": "10",
+        "display": true,
         "scale": "A Major",
         "root": "A",
         "type": "Major",
@@ -93,6 +103,7 @@ export const scaleData = [
     },
     {
         "id": "11",
+        "display": true,
         "scale": "A#/Bb Major",
         "root": "A#",
         "type": "Major",
@@ -102,6 +113,7 @@ export const scaleData = [
     },
     {
         "id": "12",
+        "display": true,
         "scale": "B Major",
         "root": "B",
         "type": "Major",

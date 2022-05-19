@@ -6,11 +6,13 @@ function Results(props) {
         <div className="App-results">
 
                 {props.data.map(data => {
+                 
                     return (
                         <>
                         <Resultbox data={data} />
                         </>  
                     )
+                    
                 }) }
 
         </div>  

@@ -7,32 +7,37 @@ import {scaleData} from './Scales.js'
 function App() {
 
 const [loadedScales, setLoadedScales] = useState(scaleData);
-const [selectedNotes, setSelectedNotes] = useState(["A", "y", "z"])
+const [selectedNotes, setSelectedNotes] = useState(["C", "D", "F"])
 
+// start with all scales 
+let filteredScaleData = loadedScales;
 
+// the filtering mechanism, iterates over the array of selected notes
+// and filters down for each one
+let count = 0;
+selectedNotes.forEach(element => {
+filteredScaleData = filteredScaleData.filter(stuff => {
+  return stuff.notes.includes(selectedNotes[count]);
+})
+count = count +1;
+});
 
-const filteredScaleData = loadedScales.filter(stuff => {
-return stuff.notes.includes(selectedNotes[0]);})
+console.log(selectedNotes);
 
-// this needs to look at each entry in selectedNotes,
-
-
+// the app!
   return (
     <div className="App">
+     {selectedNotes}
     <h2 className="App-title">Jam Utility: Filter Scales by Notes. </h2>
     <div className="App-toolbar">
     <Checkboxes sSelectedNotes={setSelectedNotes}/>
     </div>
     <Results data={filteredScaleData} />
-
-    {loadedScales.forEach(scale => {
-     console.log(scale.root)
-    })}
-    {console.log(selectedNotes)}
-    {console.log(loadedScales[0].notes)}
     </div>
   );
 }
+
+
 
 export default App;
 

@@ -7,9 +7,7 @@ function Results(props) {
 
                 {props.data.map(data => {
                     return (
-                        <>
-                        <Resultbox data={data} />
-                        </>  
+                        <Resultbox key={data.id} data={data} />
                     )
                 }) }
 

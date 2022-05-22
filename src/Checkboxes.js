@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 function Checkboxes(props) {
-    const notenames = ["A", "A#/Bb", "B", "C", "C#/Db", "D,", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"]
+    const notenames = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"]
 
 // this function sends a selected note back to the parent component for filtering
-    function sSelectedNotes(event) {
-      props.sSelectedNotes(event);
+    function setSelectedNotes(event) {
+      props.setSelectedNotes(event);
     }
 
     let interimNotes = [];
@@ -45,7 +45,7 @@ function Checkboxes(props) {
         {notenames.map(note => {
             return (
                 <>
-                <button onClick={() => {sSelectedNotes([note])}}>{note}</button> 
+                <button onClick={() => {setSelectedNotes([note])}}>{note}</button> 
                 </>  
             )
         }) }

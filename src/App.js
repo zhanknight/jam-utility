@@ -30,7 +30,7 @@ console.log(selectedNotes);
      {selectedNotes}
     <h2 className="App-title">Jam Utility: Filter Scales by Notes. </h2>
     <div className="App-toolbar">
-    <Checkboxes sSelectedNotes={setSelectedNotes}/>
+    <Checkboxes setSelectedNotes={setSelectedNotes}/>
     </div>
     <Results data={filteredScaleData} />
     </div>

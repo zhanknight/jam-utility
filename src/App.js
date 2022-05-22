@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Checkboxes from './Checkboxes';
 import Results from './Results';
@@ -7,7 +7,7 @@ import {scaleData} from './Scales.js'
 function App() {
 
 const [loadedScales, setLoadedScales] = useState(scaleData);
-const [selectedNotes, setSelectedNotes] = useState(["C", "D", "F"])
+const [selectedNotes, setSelectedNotes] = useState([])
 
 // start with all scales 
 let filteredScaleData = loadedScales;
@@ -22,10 +22,8 @@ filteredScaleData = filteredScaleData.filter(stuff => {
 count = count +1;
 });
 
-console.log(selectedNotes);
-
 // the app!
-  return (
+  return ( 
     <div className="App">
      {selectedNotes}
     <h2 className="App-title">Jam Utility: Filter Scales by Notes. </h2>

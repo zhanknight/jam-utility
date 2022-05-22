@@ -2,16 +2,16 @@ import { useState } from "react";
 
 function Checkboxes(props) {
     const notenames = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"]
+    const [interimNotes, setInterimNotes] = useState([])
 
 // this function sends a selected note back to the parent component for filtering
-    function setSelectedNotes(event) {
-      props.setSelectedNotes(event);
+    function setSelectedNotes(array) {
+      props.setSelectedNotes(array);
     }
 
-    let interimNotes = [];
 // this function pushes the note into the array
     function addNote(added) {
-      interimNotes.push(added);
+        interimNotes.push(added);
     }
 
 // this function splices the specific note out of the array
@@ -31,25 +31,15 @@ function Checkboxes(props) {
       }
       else {
           addNote(clicked);
-      }
+      } 
       console.log(interimNotes);
+      setSelectedNotes(interimNotes);
+      // this is only causing a render on the first click but works otherwise. not sure why. possibly because im modifying state directly?
     }
-   
 
-// two rows of note buttons right now - one updates a single note in the parent component for filtering
-// and the other updates the interim notes array, but that array is lost on re-render.
+// map out a button for each note that calls noteToggle when clicked
     return (
         <div className="App-selectorbar"> <h3>User selects notes to filter by here.</h3><br />
-
-     <div>
-        {notenames.map(note => {
-            return (
-                <>
-                <button onClick={() => {setSelectedNotes([note])}}>{note}</button> 
-                </>  
-            )
-        }) }
-      </div>
       <div>
         {notenames.map(note => {
             return (

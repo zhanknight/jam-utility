@@ -49,3 +49,14 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+button { 
+  color:rgb(128, 122, 66); 
+  background-color:#fed; 
+  border:1px solid; 
+  border-color: rgb(17, 4, 27) rgb(37, 10, 39) rgb(42, 27, 39) rgb(49, 36, 52); 
+}
+
+button:hover {
+  background-color: #f6f5eb;
+}

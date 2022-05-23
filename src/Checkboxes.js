@@ -40,8 +40,9 @@ function Checkboxes(props) {
 
 // map out a button for each note that calls noteToggle when clicked
     return (
-        <div className="App-selectorbar"> <h3>User selects notes to filter by here.</h3><br />
-      <div>
+        <div className="App-selectorbar"> <h4>Select notes to see scales that contain those notes.</h4><br />
+        Selected notes: {props.selectedNotes}     
+        <div>
         {notenames.map(note => {
             return (
                 <button key={note} onClick={() => {noteToggle(note)}}>{note}</button>

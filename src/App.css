@@ -1,5 +1,5 @@
 body {
-  background-color: steelblue;
+  background-color: #f0f0f0;
 
 }
 
@@ -25,7 +25,8 @@ body {
   box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.5);
   border-style: solid;
   border-width: 1px;
-  background-color: rgb(170, 199, 224);
+  border-radius: 2px;
+  background-color: #17BEBB;
 
 }
 
@@ -37,7 +38,8 @@ body {
   box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.5);
   border-style: solid;
   border-width: 1px;
-  background-color: rgb(170, 199, 224);
+  border-radius: 2px;
+  background-color: #17BEBB;
 }
 
 .App-title {
@@ -51,12 +53,20 @@ body {
 }
 
 button { 
-  color:rgb(128, 122, 66); 
-  background-color:#fed; 
+  margin: 1px;
+  padding: 5px;
+  color: #FFFFFF; 
+  background-color:#E4572E; 
   border:1px solid; 
+  border-radius: 2px;
   border-color: rgb(17, 4, 27) rgb(37, 10, 39) rgb(42, 27, 39) rgb(49, 36, 52); 
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #f6f5eb;
+  background-color: #98b041;
+}
+
+ul {
+  list-style-type: none;
 }

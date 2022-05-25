@@ -37,6 +37,12 @@ function Checkboxes(props) {
       // this is only causing a render on the first click but works otherwise. not sure why. possibly because im modifying state directly?
       // OH! JS sees arrays as reference types! So it wasn't seeing a change WITHIN the array as a reason to update. Spreading creates a new ref!
     }
+    
+// a function for the reset button
+    function resetButton() {
+        setSelectedNotes([]);
+        setInterimNotes([]);
+    }
 
 // map out a button for each note that calls noteToggle when clicked
     return (
@@ -48,6 +54,7 @@ function Checkboxes(props) {
                 <button key={note} onClick={() => {noteToggle(note)}}>{note}</button>
             )
         }) }
+        <button onClick={() => {resetButton()}}>Reset</button>
       </div>
       </div>
     );

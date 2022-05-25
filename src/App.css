@@ -67,6 +67,12 @@ button:hover {
   background-color: #98b041;
 }
 
+.button-selected {
+  border-color: #ffc914;
+  background-color:#ec6b44; 
+
+}
+
 ul {
   list-style-type: none;
 }

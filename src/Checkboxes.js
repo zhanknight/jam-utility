@@ -50,7 +50,13 @@ function Checkboxes(props) {
         Selected notes: {props.selectedNotes}     
         <div>
         {notenames.map(note => {
+            if (interimNotes.includes(note)) {
             return (
+                <button className="button-selected" key={note} onClick={() => {noteToggle(note)}}>{note}</button>
+
+            )
+            }
+            else return (
                 <button key={note} onClick={() => {noteToggle(note)}}>{note}</button>
             )
         }) }

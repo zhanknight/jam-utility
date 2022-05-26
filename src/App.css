@@ -1,5 +1,5 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #faf9e5;
 
 }
 
@@ -14,25 +14,13 @@ body {
 .App-toolbar {
   display: flex;
   flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
-}
-
-.App-item {
-  width: 32%;
-  padding-bottom: 18%; 
-  margin-bottom: 2%; 
-  position: relative;
-  box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.5);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 2px;
-  background-color: #17BEBB;
-
 }
 
 .App-selectorbar {
   width: 100%;
-  padding-bottom: 9%; 
+  padding-bottom: 5%; 
   margin-bottom: 2%; 
   position: relative;
   box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.5);
@@ -52,6 +40,30 @@ body {
   justify-content: space-between;
 }
 
+.App-item {
+  padding: 10px;
+  margin-bottom: 11px; 
+  position: relative;
+  box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  background-color: #17BEBB;
+  width: calc((100% / 2) - 25px);
+
+}
+
+@media screen and (max-width: 60em) {
+  .App-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .App-item {
+    width: 100%;
+  }
+}
+
 button { 
   margin: 1px;
   padding: 5px;
@@ -69,10 +81,14 @@ button:hover {
 
 .button-selected {
   border-color: #ffc914;
-  background-color:#ec6b44; 
+  background-color:#ee8738; 
+}
 
+.button-reset {
+  margin: 5px;
 }
 
 ul {
   list-style-type: none;
 }
+

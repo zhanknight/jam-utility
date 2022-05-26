@@ -46,21 +46,19 @@ function Checkboxes(props) {
 
 // map out a button for each note that calls noteToggle when clicked
     return (
-        <div className="App-selectorbar"> <h4>Select notes to see scales that contain those notes.</h4><br />
-        Selected notes: {props.selectedNotes}     
+        <div className="App-selectorbar"> <h4>Select notes to see scales that contain those notes.</h4>
         <div>
         {notenames.map(note => {
             if (interimNotes.includes(note)) {
             return (
                 <button className="button-selected" key={note} onClick={() => {noteToggle(note)}}>{note}</button>
-
             )
             }
             else return (
                 <button key={note} onClick={() => {noteToggle(note)}}>{note}</button>
             )
         }) }
-        <button onClick={() => {resetButton()}}>Reset</button>
+        <button className="button-reset" onClick={() => {resetButton()}}>Reset</button>
       </div>
       </div>
     );

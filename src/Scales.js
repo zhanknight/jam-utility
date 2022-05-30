@@ -121,4 +121,125 @@ export const scaleData = [
             "B", "C#/Db", "D#/Eb", "E", "F#/Gb", "G#/Ab", "A#/Bb"
         ]
     },
+    {
+        "id": "13",
+        "display": true,
+        "scale": "A Minor",
+        "root": "A",
+        "type": "Minor",
+        "notes": [
+            "A", "B", "C", "D", "E", "F", "G"
+        ]
+    },
+    {
+        "id": "14",
+        "display": true,
+        "scale": "A#/Bb minor",
+        "root": "A#",
+        "type": "Minor",
+        "notes": [
+            "A#/Bb", "C", "C#/Db", "D#/Eb", "F", "F#/Gb", "G#/Ab"
+        ]
+    },
+ {
+        "id": "15",
+        "display": true,
+        "scale": "B Minor",
+        "root": "B",
+        "type": "Minor",
+        "notes": [
+            "B", "C#/Db", "D", "E", "F#/Gb", "G", "A"
+        ]
+    },
+ {
+        "id": "16",
+        "display": true,
+        "scale": "C Minor",
+        "root": "C",
+        "type": "Minor",
+        "notes": [
+            "C", "D", "D#/Eb", "F", "G", "G#/Ab", "A#/Bb"
+        ]
+    },
+ {
+        "id": "17",
+        "display": true,
+        "scale": "C#/Db Minor",
+        "root": "C#",
+        "type": "Minor",
+        "notes": [
+            "C#/Db", "D#/Eb", "E", "F#/Gb", "G#/Ab", "A", "B"
+        ]
+    },
+ {
+        "id": "18",
+        "display": true,
+        "scale": "D Minor",
+        "root": "D",
+        "type": "Minor",
+        "notes": [
+            "D", "E", "F", "G", "A", "A#/Bb", "C"
+        ]
+    },
+ {
+        "id": "19",
+        "display": true,
+        "scale": "D#/Eb Minor",
+        "root": "D#",
+        "type": "Minor",
+        "notes": [
+            "D#/Eb", "F", "F#/Gb", "G#/Ab", "A#/Bb", "B", "C#/Db"
+        ]
+    },
+ {
+        "id": "20",
+        "display": true,
+        "scale": "E Minor",
+        "root": "E",
+        "type": "Minor",
+        "notes": [
+            "E", "F#/Gb", "G", "A", "B", "C", "D"
+        ]
+    },
+ {
+        "id": "21",
+        "display": true,
+        "scale": "F Minor",
+        "root": "F",
+        "type": "Minor",
+        "notes": [
+            "F", "G", "G#/Ab", "A#/Bb", "C", "C#/Db", "D#/Eb"
+        ]
+    },
+ {
+        "id": "22",
+        "display": true,
+        "scale": "F#/Gb Minor",
+        "root": "F#",
+        "type": "Minor",
+        "notes": [
+            "F#/Gb", "G#/Ab", "A", "B", "C#/Db", "D", "E"
+        ]
+    },
+ {
+        "id": "23",
+        "display": true,
+        "scale": "G Minor",
+        "root": "G",
+        "type": "Minor",
+        "notes": [
+            "G", "A", "A#/Bb", "C", "D", "D#/Eb", "F"
+        ]
+    },
+ {
+        "id": "24",
+        "display": true,
+        "scale": "G#/Ab Minor",
+        "root": "G#",
+        "type": "Minor",
+        "notes": [
+            "G#/Ab", "A#/Bb", "B", "C#/Db", "D#/Eb", "E", "F#/Gb"
+        ]
+    },
+
                     ];

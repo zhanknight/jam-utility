@@ -251,13 +251,11 @@ function ScaleBuilder() {
     // a 'definition' for the major scale interval pattern
     const scaleDefi = [1, 1, 0, 1, 1, 1, 0];
     // hard coded test root note
-    let root = "E";
+    let root = "C";
     
-    function checkRoot(note) {
-        return note === root;
-      }
+
     // find the first instance of the root note in the list of all possible notes
-    let startNote = notes.findIndex(checkRoot);
+    let startNote = notes.findIndex((note) => note === root );
     let generatedScale = [];
 
     // use the 'definition' to move through all possible notes starting from the root we just found

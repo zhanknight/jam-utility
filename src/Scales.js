@@ -243,3 +243,36 @@ export const scaleData = [
     },
 
                     ];
+
+// Idea for programmatically generating scales based on scale type 'definitions' 
+function ScaleBuilder() {
+    // all possible notes, doubled so that we don't ever iterate past the end of the array.
+    const notes = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"];
+    // a 'definition' for the major scale interval pattern
+    const scaleDefi = [1, 1, 0, 1, 1, 1, 0];
+    // hard coded test root note
+    let root = "E";
+    
+    function checkRoot(note) {
+        return note === root;
+      }
+    // find the first instance of the root note in the list of all possible notes
+    let startNote = notes.findIndex(checkRoot);
+    let generatedScale = [];
+
+    // use the 'definition' to move through all possible notes starting from the root we just found
+    // pushing them into a new array as our generated scale
+    scaleDefi.forEach(a => {
+        if (a === 0) {
+            generatedScale.push(notes[startNote]);
+            startNote = startNote +1;
+        }
+        if (a === 1) {
+            generatedScale.push(notes[startNote]);
+            startNote = startNote +2;
+        }
+    })
+    console.log(generatedScale);
+}
+// works! that was a productive lunch break. 
+ScaleBuilder();

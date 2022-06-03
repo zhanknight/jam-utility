@@ -1,4 +1,8 @@
 import { useState } from "react";
+import Button from '@mui/material/Button';
+import { ButtonGroup } from "@mui/material";
+import Paper from "@mui/material/Paper"
+import { Box } from "@mui/system";
 
 function Checkboxes(props) {
     const notenames = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"]
@@ -46,22 +50,31 @@ function Checkboxes(props) {
 
 // map out a button for each note that calls noteToggle when clicked
     return (
-        <div className="App-selectorbar"> <h4>Select notes to see scales that contain those notes.</h4>
-        <div>
+      <Paper variant="outlined">
+          
+        <h4>Select notes to see scales that contain those notes.</h4>
+        <Box>
+        <ButtonGroup size="small" aria-label="small button group">
+
         {notenames.map(note => {
             if (interimNotes.includes(note)) {
             return (
-                <button className="button-selected" key={note} onClick={() => {noteToggle(note)}}>{note}</button>
+                <Button variant="contained" style={{ textTransform: "none", padding: "14px 0px" }} color="secondary" key={note} onClick={() => {noteToggle(note)}}>{note}</Button>
             )
             }
             else return (
-                <button key={note} onClick={() => {noteToggle(note)}}>{note}</button>
+                <Button variant="contained" style={{ textTransform: "none", padding: "14px 0px" }} key={note} onClick={() => {noteToggle(note)}}>{note}</Button>
             )
         }) }
-        <button className="button-reset" onClick={() => {resetButton()}}>Reset</button>
-      </div>
-      </div>
+        <Button variant="contained" color="error" onClick={() => {resetButton()}}>Reset</Button>
+        </ButtonGroup>
+      </Box>
+      </Paper>
     );
   }
 
   export default Checkboxes;
+
+
+  //<button className="button-selected" key={note} onClick={() => {noteToggle(note)}}>{note}</button>
+  // <button key={note} onClick={() => {noteToggle(note)}}>{note}</button>

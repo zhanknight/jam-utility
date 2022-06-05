@@ -29,7 +29,9 @@ count = count +1;
 // the app!
   return ( 
     <Container maxWidth="md">
-      <Grid container spacing={{ xs: 2, md: 2 }} columns={{ xs: 4, sm: 4, md: 4 }}>
+      <Grid container spacing={{ xs: 2, md: 2 }} columns={{ xs: 4, sm: 4, md: 4 }}  direction="column"
+            alignItems="center"
+            justifyContent="center">
         <Grid item xs={4} sm={4} md={4}>
           <Typography variant="h5" component="h3">
            Jam Utility: Filter Scales by Notes. 

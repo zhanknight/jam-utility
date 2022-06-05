@@ -54,16 +54,17 @@ function Checkboxes(props) {
           
         <h4>Select notes to see scales that contain those notes.</h4>
         <Box>
-        <ButtonGroup size="small" aria-label="small button group">
+        <ButtonGroup size="small" style={{ textTransform: "none", padding: "0px 0px" }} aria-label="small button group">
 
         {notenames.map(note => {
             if (interimNotes.includes(note)) {
             return (
-                <Button variant="contained" style={{ textTransform: "none", padding: "14px 0px" }} color="secondary" key={note} onClick={() => {noteToggle(note)}}>{note}</Button>
+                
+                <Button variant="contained" style={{ textTransform: "none", padding: "0px 0px" }} color="secondary" key={note} onClick={() => {noteToggle(note)}}>{note}</Button>
             )
             }
             else return (
-                <Button variant="contained" style={{ textTransform: "none", padding: "14px 0px" }} key={note} onClick={() => {noteToggle(note)}}>{note}</Button>
+                <Button variant="contained" style={{ textTransform: "none", padding: "0px 0px" }} key={note} onClick={() => {noteToggle(note)}}>{note}</Button>
             )
         }) }
         <Button variant="contained" color="error" onClick={() => {resetButton()}}>Reset</Button>

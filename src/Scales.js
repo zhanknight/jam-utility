@@ -274,3 +274,29 @@ function ScaleBuilder() {
 }
 // works! that was a productive lunch break. 
 ScaleBuilder();
+
+// Idea #2 for programmatically generating scales based on scale type 'definitions' 
+// instead of making definitions based on intervals, make definitions based on 
+// interval distance from the root, IE 1,3,5,6 etc rather than 1,1,0,1,1,1,0
+
+//  'definitions' for the major and minor scale interval pattern with distance from root
+const major = [2,4,5,7,9,11];
+const minor = [2,3,5,7,8,10];
+
+function ScaleBuilder2(root, type) {
+// all possible notes, doubled so that we don't ever iterate past the end of the array.
+const notes = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", 
+               "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"];
+let scaleDefi = type;
+let startNote = notes.findIndex((note) => note === root);
+let generatedScale =[];
+
+generatedScale.push(notes[startNote]);
+scaleDefi.forEach(n => {
+    generatedScale.push(notes[startNote + n])
+})
+console.log(generatedScale);
+}
+// also works! slightly shorter, no conditionals, accepts args! 
+ScaleBuilder2("C", major);
+ScaleBuilder2("G", minor);

@@ -1,302 +1,58 @@
-// This will be our giant array of scales objects, just test data for now
 
-export const scaleData = [
-    {
-        "id": "1",
-        "display": true,
-        "scale": "C Major",
-        "root": "C",
-        "type": "Major",
-        "notes": [
-            "C", "D", "E", "F", "G", "A", "B"
-        ]
-    },
-    {
-        "id": "2",
-        "display": true,
-        "scale": "C#/Db Major",
-        "root": "C#",
-        "type": "Major",
-        "notes": [
-            "C#/Db", "D#/Eb", "F", "F#/Gb", "G#/Ab", "A#/Bb", "C"
-        ]
-    },
-    {
-        "id": "3",
-        "display": true,
-        "scale": "D Major",
-        "root": "D",
-        "type": "Major",
-        "notes": [
-            "D", "E", "F#/Gb", "G", "A", "B", "C#/Db"
-        ]
-    },
-    {
-        "id": "4",
-        "display": true,
-        "scale": "D#/Eb Major",
-        "root": "D#",
-        "type": "Major",
-        "notes": [
-            "D#/Eb", "F", "G", "G#/Ab", "Bb", "C", "D"
-        ]
-    },
-    {
-        "id": "5",
-        "display": true,
-        "scale": "E Major",
-        "root": "E",
-        "type": "Major",
-        "notes": [
-            "E", "F#/Gb", "G#/Ab", "A", "B", "C#/Db", "D#/Eb"
-        ]
-    },
-    {
-        "id": "6",
-        "display": true,
-        "scale": "F Major",
-        "root": "F",
-        "type": "Major",
-        "notes": [
-            "F", "G", "A", "A#/Bb", "C", "D", "E"
-        ]
-    },
-    {
-        "id": "7",
-        "display": true,
-        "scale": "F#/Gb Major",
-        "root": "F#",
-        "type": "Major",
-        "notes": [
-            "F#/Gb", "G#/Ab", "A#/Bb", "Cb", "C#/Db", "D#/Eb", "F"
-        ]
-    },
-    {
-        "id": "8",
-        "display": true,
-        "scale": "G Major",
-        "root": "G",
-        "type": "Major",
-        "notes": [
-            "G", "A", "B", "C", "D", "E", "F#/Gb"
-        ]
-    },
-    {
-        "id": "9",
-        "display": true,
-        "scale": "G#/Ab Major",
-        "root": "G#",
-        "type": "Major",
-        "notes": [
-            "G#/Ab", "A#/Bb", "C", "C#/Db", "D#/Eb", "F", "G"
-        ]
-    },
-    {
-        "id": "10",
-        "display": true,
-        "scale": "A Major",
-        "root": "A",
-        "type": "Major",
-        "notes": [
-            "A", "B", "C#/Db", "D", "E", "F#/Gb", "G#/Ab"
-        ]
-    },
-    {
-        "id": "11",
-        "display": true,
-        "scale": "A#/Bb Major",
-        "root": "A#",
-        "type": "Major",
-        "notes": [
-            "A#/Bb", "C", "D", "D#/Eb", "F", "G", "A"
-        ]
-    },
-    {
-        "id": "12",
-        "display": true,
-        "scale": "B Major",
-        "root": "B",
-        "type": "Major",
-        "notes": [
-            "B", "C#/Db", "D#/Eb", "E", "F#/Gb", "G#/Ab", "A#/Bb"
-        ]
-    },
-    {
-        "id": "13",
-        "display": true,
-        "scale": "A Minor",
-        "root": "A",
-        "type": "Minor",
-        "notes": [
-            "A", "B", "C", "D", "E", "F", "G"
-        ]
-    },
-    {
-        "id": "14",
-        "display": true,
-        "scale": "A#/Bb minor",
-        "root": "A#",
-        "type": "Minor",
-        "notes": [
-            "A#/Bb", "C", "C#/Db", "D#/Eb", "F", "F#/Gb", "G#/Ab"
-        ]
-    },
- {
-        "id": "15",
-        "display": true,
-        "scale": "B Minor",
-        "root": "B",
-        "type": "Minor",
-        "notes": [
-            "B", "C#/Db", "D", "E", "F#/Gb", "G", "A"
-        ]
-    },
- {
-        "id": "16",
-        "display": true,
-        "scale": "C Minor",
-        "root": "C",
-        "type": "Minor",
-        "notes": [
-            "C", "D", "D#/Eb", "F", "G", "G#/Ab", "A#/Bb"
-        ]
-    },
- {
-        "id": "17",
-        "display": true,
-        "scale": "C#/Db Minor",
-        "root": "C#",
-        "type": "Minor",
-        "notes": [
-            "C#/Db", "D#/Eb", "E", "F#/Gb", "G#/Ab", "A", "B"
-        ]
-    },
- {
-        "id": "18",
-        "display": true,
-        "scale": "D Minor",
-        "root": "D",
-        "type": "Minor",
-        "notes": [
-            "D", "E", "F", "G", "A", "A#/Bb", "C"
-        ]
-    },
- {
-        "id": "19",
-        "display": true,
-        "scale": "D#/Eb Minor",
-        "root": "D#",
-        "type": "Minor",
-        "notes": [
-            "D#/Eb", "F", "F#/Gb", "G#/Ab", "A#/Bb", "B", "C#/Db"
-        ]
-    },
- {
-        "id": "20",
-        "display": true,
-        "scale": "E Minor",
-        "root": "E",
-        "type": "Minor",
-        "notes": [
-            "E", "F#/Gb", "G", "A", "B", "C", "D"
-        ]
-    },
- {
-        "id": "21",
-        "display": true,
-        "scale": "F Minor",
-        "root": "F",
-        "type": "Minor",
-        "notes": [
-            "F", "G", "G#/Ab", "A#/Bb", "C", "C#/Db", "D#/Eb"
-        ]
-    },
- {
-        "id": "22",
-        "display": true,
-        "scale": "F#/Gb Minor",
-        "root": "F#",
-        "type": "Minor",
-        "notes": [
-            "F#/Gb", "G#/Ab", "A", "B", "C#/Db", "D", "E"
-        ]
-    },
- {
-        "id": "23",
-        "display": true,
-        "scale": "G Minor",
-        "root": "G",
-        "type": "Minor",
-        "notes": [
-            "G", "A", "A#/Bb", "C", "D", "D#/Eb", "F"
-        ]
-    },
- {
-        "id": "24",
-        "display": true,
-        "scale": "G#/Ab Minor",
-        "root": "G#",
-        "type": "Minor",
-        "notes": [
-            "G#/Ab", "A#/Bb", "B", "C#/Db", "D#/Eb", "E", "F#/Gb"
-        ]
-    },
+// programmatically generating scales based on scale type 'definitions' 
 
-                    ];
-
-// Idea for programmatically generating scales based on scale type 'definitions' 
-function ScaleBuilder() {
-    // all possible notes, doubled so that we don't ever iterate past the end of the array.
-    const notes = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"];
-    // a 'definition' for the major scale interval pattern
-    const scaleDefi = [1, 1, 0, 1, 1, 1, 0];
-    // hard coded test root note
-    let root = "C";
-    
-
-    // find the first instance of the root note in the list of all possible notes
-    let startNote = notes.findIndex((note) => note === root );
-    let generatedScale = [];
-
-    // use the 'definition' to move through all possible notes starting from the root we just found
-    // pushing them into a new array as our generated scale
-    scaleDefi.forEach(a => {
-        if (a === 0) {
-            generatedScale.push(notes[startNote]);
-            startNote = startNote +1;
-        }
-        if (a === 1) {
-            generatedScale.push(notes[startNote]);
-            startNote = startNote +2;
-        }
-    })
-    console.log(generatedScale);
-}
-// works! that was a productive lunch break. 
-ScaleBuilder();
-
-// Idea #2 for programmatically generating scales based on scale type 'definitions' 
-// instead of making definitions based on intervals, make definitions based on 
-// interval distance from the root, IE 1,3,5,6 etc rather than 1,1,0,1,1,1,0
+// the array we send back to app.js
+let scaleData = [];
 
 //  'definitions' for the major and minor scale interval pattern with distance from root
-const major = [2,4,5,7,9,11];
-const minor = [2,3,5,7,8,10];
-
-function ScaleBuilder2(root, type) {
-// all possible notes, doubled so that we don't ever iterate past the end of the array.
-const notes = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", 
-               "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"];
-let scaleDefi = type;
-let startNote = notes.findIndex((note) => note === root);
-let generatedScale =[];
-
-generatedScale.push(notes[startNote]);
-scaleDefi.forEach(n => {
-    generatedScale.push(notes[startNote + n])
-})
-console.log(generatedScale);
+const minor = {
+    "type": "Minor",
+    "definition": [2,3,5,7,8,10]
 }
-// also works! slightly shorter, no conditionals, accepts args! 
-ScaleBuilder2("C", major);
-ScaleBuilder2("G", minor);
+
+const major = {
+    "type": "Major",
+    "definition": [2,4,5,7,9,11]
+}
+
+// function to build individual scales from definitions
+function ScaleBuilder(root, type) {
+    // all possible notes, doubled so that we don't ever iterate past the end of the array.
+    const notes = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", 
+                   "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"];
+    let scaleDefi = type.definition;
+    let startNote = notes.findIndex((note) => note === root);
+    let generatedScale =[];
+
+        generatedScale.push(notes[startNote]);
+            scaleDefi.forEach(n => {
+            generatedScale.push(notes[startNote + n]);
+            })
+
+// generate the object for use in the app 
+        return {
+         "id": `${root} ${type.type}`,
+         "display": true,
+         "scale": `${root} ${type.type}`, 
+         "root": root,
+         "type": type.type,
+         "notes": generatedScale
+        };
+}
+
+// function to generate every possible scale for every possible root
+function GenerateAllScales(type) {
+   const notes = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"]
+   
+        notes.forEach (n => {
+             scaleData.push(ScaleBuilder(n, type));
+         })
+    console.log(scaleData);
+}
+
+// call the functions
+GenerateAllScales(minor);
+GenerateAllScales(major);
+
+export {scaleData};
+

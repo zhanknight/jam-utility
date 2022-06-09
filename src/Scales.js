@@ -50,9 +50,21 @@ function GenerateAllScales(type) {
     console.log(scaleData);
 }
 
-// call the functions
+// call the functions to generate the scales
 GenerateAllScales(minor);
 GenerateAllScales(major);
+
+// function to randomize location of scales in the array
+function randomizeScaleData() {
+    let m = scaleData.length, i;
+    while (m) {
+        i = Math.floor(Math.random() * m--);
+        [scaleData[m], scaleData[i]] = [scaleData[i], scaleData[m]];
+    }
+    console.log(scaleData);
+}
+// call it
+randomizeScaleData();
 
 export {scaleData};
 

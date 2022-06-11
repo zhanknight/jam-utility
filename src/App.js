@@ -25,8 +25,8 @@ count = count +1;
 // the app!
   return ( 
     <div className="App">
-    <h2 className="App-title">Jam Utility: Filter Scales by Notes. </h2>
-    <div className="App-toolbar">
+    <h2 className="App-title" data-testid="title">Jam Utility: Filter Scales by Notes. </h2>
+    <div className="App-toolbar" data-testid="checkboxes">
     <Checkboxes setSelectedNotes={setSelectedNotes} selectedNotes={selectedNotes}/>
     </div>
     <Results data={filteredScaleData} />

@@ -1,8 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Renders title', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleElement = screen.getByTestId("title");
+  expect(titleElement).toBeInTheDocument();
+});
+
+test('Renders checkbox component', () => {
+  render(<App />);
+  const checkboxComponent = screen.getByTestId("checkboxes");
+  expect(checkboxComponent).toBeInTheDocument();
 });

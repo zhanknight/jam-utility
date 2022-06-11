@@ -47,7 +47,7 @@ function GenerateAllScales(type) {
         notes.forEach (n => {
              scaleData.push(ScaleBuilder(n, type));
          })
-    console.log(scaleData);
+//    console.log(scaleData);
 }
 
 // call the functions to generate the scales
@@ -61,10 +61,10 @@ function randomizeScaleData() {
         i = Math.floor(Math.random() * m--);
         [scaleData[m], scaleData[i]] = [scaleData[i], scaleData[m]];
     }
-    console.log(scaleData);
+//    console.log(scaleData);
 }
 // call it
 randomizeScaleData();
 
-export {scaleData};
+export {scaleData, ScaleBuilder, major};
 

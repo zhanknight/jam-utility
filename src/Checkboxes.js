@@ -47,7 +47,7 @@ function Checkboxes(props) {
 // map out a button for each note that calls noteToggle when clicked
     return (
         <div className="App-selectorbar"> <h4>Select notes to see scales that contain those notes.</h4>
-        <div>
+        <div data-testid="buttons">
         {notenames.map(note => {
             if (interimNotes.includes(note)) {
             return (

@@ -6,7 +6,7 @@ import {scaleData} from './Scales.js'
 
 function App() {
 
-const [loadedScales, setLoadedScales] = useState(scaleData);
+const [loadedScales] = useState(scaleData);
 const [selectedNotes, setSelectedNotes] = useState([])
 
 // start with all scales 

@@ -1,4 +1,4 @@
-name: Production workflow
+name: Deploying
 
 on:
   push:

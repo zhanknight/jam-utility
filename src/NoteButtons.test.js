@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import Checkboxes from './Checkboxes';
+import NoteButtons from './NoteButtons';
 
 test('Renders button div', () => {
-  render(<Checkboxes />);
+  render(<NoteButtons />);
   const buttonElement = screen.getByTestId("buttons");
   expect(buttonElement).toBeInTheDocument();
 });

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Checkboxes(props) {
+function NoteButtons(props) {
     const notenames = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"]
     const [interimNotes, setInterimNotes] = useState([])
 
@@ -64,4 +64,4 @@ function Checkboxes(props) {
     );
   }
 
-  export default Checkboxes;
+  export default NoteButtons;

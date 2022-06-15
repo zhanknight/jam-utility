@@ -7,8 +7,8 @@ test('Renders title', () => {
   expect(titleElement).toBeInTheDocument();
 });
 
-test('Renders checkbox component', () => {
+test('Renders NoteButtons component', () => {
   render(<App />);
-  const checkboxComponent = screen.getByTestId("checkboxes");
-  expect(checkboxComponent).toBeInTheDocument();
+  const buttonComponent = screen.getByTestId("notebuttons");
+  expect(buttonComponent).toBeInTheDocument();
 });

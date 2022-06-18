@@ -59,6 +59,26 @@
   margin: 0px;
   background-color: #f1bfbf;
 }
+.Dorian {
+  margin: 0px;
+  background-color: #d5f8a0;
+}
+.Phrygian {
+  margin: 0px;
+  background-color: #bff1ee;
+}
+.Mixolydian {
+  margin: 0px;
+  background-color: #bfdbf1;
+}
+.Lydian {
+  margin: 0px;
+  background-color: #d6bff1;
+}
+.Locrian {
+  margin: 0px;
+  background-color: #f0bff1;
+}
 
 @media screen and (max-width: 60em) {
   .App-results {

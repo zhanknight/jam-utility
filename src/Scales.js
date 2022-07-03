@@ -5,40 +5,13 @@
 let scaleData = [];
 
 //  'definitions' for scales in interval pattern with distance from root
-const minor = {
-    "type": "Minor",
-    "definition": [2,3,5,7,8,10]
-}
-
-const major = {
-    "type": "Major",
-    "definition": [2,4,5,7,9,11]
-}
-
-const dorian = {
-    "type": "Dorian",
-    "definition": [2,3,5,7,9,10]
-}
-
-const phrygian = {
-    "type": "Phrygian",
-    "definition": [1,3,5,7,8,10]
-}
-
-const lydian = {
-    "type": "Lydian",
-    "definition": [2,4,6,7,9,11]
-}
-
-const mixolydian = {
-    "type": "Mixolydian",
-    "definition": [2,4,5,7,9,10]
-}
-
-const locrian = {
-    "type": "Locrian",
-    "definition": [1,3,5,6,8,10]
-}
+const minor = {"type": "Minor", "definition": [2,3,5,7,8,10]}
+const major = {"type": "Major", "definition": [2,4,5,7,9,11]}
+const dorian = {"type": "Dorian", "definition": [2,3,5,7,9,10]}
+const phrygian = {"type": "Phrygian", "definition": [1,3,5,7,8,10]}
+const lydian = {"type": "Lydian", "definition": [2,4,6,7,9,11]}
+const mixolydian = {"type": "Mixolydian", "definition": [2,4,5,7,9,10]}
+const locrian = {"type": "Locrian", "definition": [1,3,5,6,8,10]}
 
 // function to build individual scales from definitions
 function ScaleBuilder(root, type) {

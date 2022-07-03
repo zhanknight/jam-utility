@@ -1,4 +1,3 @@
-
 // programmatically generating scales based on scale type 'definitions' 
 
 // the array we send back to app.js
@@ -12,6 +11,8 @@ const phrygian = {"type": "Phrygian", "definition": [1,3,5,7,8,10]}
 const lydian = {"type": "Lydian", "definition": [2,4,6,7,9,11]}
 const mixolydian = {"type": "Mixolydian", "definition": [2,4,5,7,9,10]}
 const locrian = {"type": "Locrian", "definition": [1,3,5,6,8,10]}
+
+const allDefinitons = [minor, major, dorian, phrygian, lydian, mixolydian, locrian]
 
 // function to build individual scales from definitions
 function ScaleBuilder(root, type) {
@@ -48,14 +49,10 @@ function GenerateAllScales(type) {
 //    console.log(scaleData);
 }
 
-// call the functions to generate the scales
-GenerateAllScales(minor);
-GenerateAllScales(major);
-GenerateAllScales(dorian); 
-GenerateAllScales(phrygian);
-GenerateAllScales(mixolydian);
-GenerateAllScales(lydian);
-GenerateAllScales(locrian);
+// call the function for each definition to generate the scales
+allDefinitons.forEach(i => {
+    GenerateAllScales(i)
+})
 
 // function to randomize location of scales in the array
 function randomizeScaleData() {

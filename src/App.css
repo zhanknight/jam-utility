@@ -4,6 +4,7 @@
   max-width: 1024px;
   min-width: 540px;
   margin: 0 auto;
+  height: 150vmax;
 }
 
 .App-toolbar {

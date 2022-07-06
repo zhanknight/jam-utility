@@ -95,6 +95,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
   }
   .App-item {
     width: 100%;

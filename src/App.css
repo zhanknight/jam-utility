@@ -1,9 +1,9 @@
 .App {
   text-align: center;
-  padding: 25px 50px 75px 100px;
+  padding: 25px 50px 75px 50px;
   max-width: 1024px;
   min-width: 540px;
-  margin: 0 auto;
+  margin: auto;
   height: 150vmax;
 }
 

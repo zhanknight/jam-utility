@@ -23,7 +23,7 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 2px;
-  background-color: #17BEBB;
+  background-color: #ffffff;
 }
 
 .App-title {
@@ -45,7 +45,7 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 2px;
-  background-color: #17BEBB;
+  background-color: #ffffff;
   width: calc((100% / 2) - 25px);
 }
 
@@ -58,7 +58,7 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 2px;
-  background-color: #17BEBB;
+  background-color: #ffe8e8;
   width: 100%;
 }
 
@@ -107,22 +107,23 @@ button {
   margin: 1px;
   padding: 5px;
   color: #FFFFFF; 
-  background-color:#E4572E; 
+  background-color:#2f2f2f; 
   border:1px solid; 
   border-radius: 2px;
-  border-color: rgb(17, 4, 27) rgb(37, 10, 39) rgb(42, 27, 39) rgb(49, 36, 52); 
+  border-color: rgb(0, 0, 0) rgb(37, 10, 39) rgb(42, 27, 39) rgb(49, 36, 52); 
   font-weight: bold;
   font-size: .85em;
 
 }
 
 button:hover {
-  background-color: #98b041;
+  background-color: #91adb4;
 }
 
 .button-selected {
-  border-color: #ffc914;
-  background-color:#ee8738; 
+  color: #000000; 
+  border-color: rgb(0, 0, 0);
+  background-color:#e3e3e3; 
 }
 
 .button-reset {

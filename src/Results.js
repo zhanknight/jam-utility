@@ -6,7 +6,7 @@ if (props.data.length === 0) {
     return (
         <div className="App-results">
             <div className="App-noresult"> 
-             <h3 className="major">Not Found</h3>
+             <h3 className="Major">Not Found</h3>
                 <h4>Uh oh!</h4>
                 No scales found that include all of the selected notes.   
             </div>

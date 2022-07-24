@@ -58,37 +58,41 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 2px;
-  background-color: #ffe8e8;
+  background-color: #ffffff;
   width: 100%;
 }
 
 .Major {
-  background-color: #fefe91;
+  background-color: #CAF0F8;
   margin: 0px;
 }
 .Minor {
   margin: 0px;
-  background-color: #f1bfbf;
+  background-color: #ADE8F4;
 }
 .Dorian {
   margin: 0px;
-  background-color: #d5f8a0;
+  background-color: #90E0EF;
 }
 .Phrygian {
   margin: 0px;
-  background-color: #bff1ee;
+  background-color: #48CAE4;
 }
 .Mixolydian {
   margin: 0px;
-  background-color: #bfdbf1;
+  background-color: #00B4D8;
+  
 }
 .Lydian {
   margin: 0px;
-  background-color: #d6bff1;
+  background-color: #0096C7;
+  color: #FFFFFF; 
+
 }
 .Locrian {
   margin: 0px;
-  background-color: #f0bff1;
+  background-color: #0077B6;
+  color: #FFFFFF; 
 }
 
 @media screen and (max-width: 60em) {
@@ -123,7 +127,7 @@ button:hover {
 .button-selected {
   color: #000000; 
   border-color: rgb(0, 0, 0);
-  background-color:#e3e3e3; 
+  background-color:#90E0EF; 
 }
 
 .button-reset {

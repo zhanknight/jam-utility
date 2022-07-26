@@ -5,6 +5,8 @@ Have a riff or melody and want to know what other material might work well with 
 Jam Utility references a library of musical scales. Select the notes in your riff or melody, and Jam Utility will tell you which musical scales contain those notes! 
 
 #### Visit the current deployment of Jam Utility here: [https://jam-utility.herokuapp.com](https://jam-utility.herokuapp.com)
+*Jam Utility is deployed to a free Heroku instance, it **may take about 30 seconds to load** if it hasn't been accessed recently.*
+
 
 ![Image of Jam Utility](public/JamUtilityScreenshot.png)
 

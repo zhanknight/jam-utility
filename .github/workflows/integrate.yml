@@ -12,6 +12,7 @@ on:
     branches: [ "master" ]
     paths-ignore:
       - '**/README.md'
+      - '**/JamUtilityScreenshot.png'
 
 jobs:
   build:

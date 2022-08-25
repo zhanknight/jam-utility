@@ -12,6 +12,13 @@ function Resultbox(props) {
                         `${data}   `
                     )
                 }) }
+        <h4>Chords in the scale:</h4>
+   
+                {props.data.chords.map(data => {
+                    return (
+                        `${data}   `
+                    )
+                }) }
              
         </div>
     )

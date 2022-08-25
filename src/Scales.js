@@ -4,13 +4,13 @@
 let scaleData = [];
 
 //  'definitions' for scales in interval pattern with distance from root
-const minor = {"type": "Minor", "definition": [2,3,5,7,8,10]}
-const major = {"type": "Major", "definition": [2,4,5,7,9,11]}
-const dorian = {"type": "Dorian", "definition": [2,3,5,7,9,10]}
-const phrygian = {"type": "Phrygian", "definition": [1,3,5,7,8,10]}
-const lydian = {"type": "Lydian", "definition": [2,4,6,7,9,11]}
-const mixolydian = {"type": "Mixolydian", "definition": [2,4,5,7,9,10]}
-const locrian = {"type": "Locrian", "definition": [1,3,5,6,8,10]}
+const minor = {"type": "Minor", "definition": [2,3,5,7,8,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
+const major = {"type": "Major", "definition": [2,4,5,7,9,11], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
+const dorian = {"type": "Dorian", "definition": [2,3,5,7,9,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
+const phrygian = {"type": "Phrygian", "definition": [1,3,5,7,8,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
+const lydian = {"type": "Lydian", "definition": [2,4,6,7,9,11], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
+const mixolydian = {"type": "Mixolydian", "definition": [2,4,5,7,9,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
+const locrian = {"type": "Locrian", "definition": [1,3,5,6,8,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
 
 const allDefinitons = [minor, major, dorian, phrygian, lydian, mixolydian, locrian]
 
@@ -20,13 +20,19 @@ function ScaleBuilder(root, type) {
     const notes = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", 
                    "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"];
     let scaleDefi = type.definition;
+    let chordDefi = type.chords;
     let startNote = notes.findIndex((note) => note === root);
     let generatedScale =[];
+    let generatedChords =[];
 
         generatedScale.push(notes[startNote]);
             scaleDefi.forEach(n => {
             generatedScale.push(notes[startNote + n]);
             })
+
+        generatedScale.forEach((n, index) => {
+            generatedChords.push(n + chordDefi[index])
+        })    
 
 // generate the object for use in the app 
         return {
@@ -35,7 +41,8 @@ function ScaleBuilder(root, type) {
          "scale": `${root} ${type.type}`, 
          "root": root,
          "type": type.type,
-         "notes": generatedScale
+         "notes": generatedScale,
+         "chords": generatedChords
         };
 }
 

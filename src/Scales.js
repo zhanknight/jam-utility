@@ -3,14 +3,14 @@
 // the array we send back to app.js
 let scaleData = [];
 
-//  'definitions' for scales in interval pattern with distance from root
-const minor = {"type": "Minor", "definition": [2,3,5,7,8,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
-const major = {"type": "Major", "definition": [2,4,5,7,9,11], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
-const dorian = {"type": "Dorian", "definition": [2,3,5,7,9,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
-const phrygian = {"type": "Phrygian", "definition": [1,3,5,7,8,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
-const lydian = {"type": "Lydian", "definition": [2,4,6,7,9,11], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
-const mixolydian = {"type": "Mixolydian", "definition": [2,4,5,7,9,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
-const locrian = {"type": "Locrian", "definition": [1,3,5,6,8,10], "chords": ["min","Maj","min","min","Maj","min","Dim"]}
+//  'definitions' for scales in interval pattern with distance from root 
+const minor = {"type": "Minor", "definition": [2,3,5,7,8,10], "chords": ["Min","Dim","Maj","Min","Min","Maj","Maj"]}
+const major = {"type": "Major", "definition": [2,4,5,7,9,11], "chords": ["Maj","Min","Min","Maj","Maj","min","Dim"]}
+const dorian = {"type": "Dorian", "definition": [2,3,5,7,9,10], "chords": ["Min","Min","Maj","Maj","Min","Dim","Maj"]}
+const phrygian = {"type": "Phrygian", "definition": [1,3,5,7,8,10], "chords": ["Min","Maj","Maj","Min","Dim","Maj","Min"]}
+const lydian = {"type": "Lydian", "definition": [2,4,6,7,9,11], "chords": ["Maj","Maj","Min","Dim","Maj","Min","Min"]}
+const mixolydian = {"type": "Mixolydian", "definition": [2,4,5,7,9,10], "chords": ["Maj","Min","Dim","Maj","Min","Min","Maj"]}
+const locrian = {"type": "Locrian", "definition": [1,3,5,6,8,10], "chords": ["Dim","Maj","Min","Min","Maj","Maj","Min"]}
 
 const allDefinitons = [minor, major, dorian, phrygian, lydian, mixolydian, locrian]
 

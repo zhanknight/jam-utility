@@ -9,7 +9,7 @@ function Resultbox(props) {
    
                 {props.data.notes.map(data => {
                     return (
-                        `${data}   `
+                        `${data}    `
                     )
                 }) }
         <h4>Chords in the scale:</h4>

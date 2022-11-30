@@ -4,8 +4,8 @@
 Have a riff or melody and want to know what other material might work well with it? 
 Jam Utility creates and filters a library of musical scales. Select the notes in your riff or melody, and Jam Utility will tell you which musical scales contain those notes! It will display all the notes within each matching scale, as well as the common chords built from that scale. Nice! 
 
-#### Visit the current deployment of Jam Utility here: [https://jam-utility.herokuapp.com](https://jam-utility.herokuapp.com)
-*Jam Utility is deployed to a free Heroku instance, it **may take about 30 seconds to load** if it hasn't been accessed recently.*
+#### ~~Visit the current deployment of Jam Utility here: [https://jam-utility.herokuapp.com](https://github.com/zhanknight/jam-utility)~~
+*Jam Utility is currently not deployed following Heroku eliminating free deployments.*
 
 
 ![Image of Jam Utility](public/JamUtilityScreenshot.png)

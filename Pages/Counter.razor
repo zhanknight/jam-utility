@@ -1,4 +1,7 @@
-﻿@page "/counter"
+﻿
+@page "/counter"
+@using JamUtility.Models
+@using JamUtility.Components
 
 <PageTitle>Counter</PageTitle>
 
@@ -8,11 +11,22 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+
+@foreach (var y in x)
+{
+    <ScaleCard scale=y />
+})
+
 @code {
     private int currentCount = 0;
 
     private void IncrementCount()
     {
         currentCount++;
+    }
+    List<Scale> x = new List<Scale>();
+    protected override async Task OnInitializedAsync()
+    {
+         x = Scales.GetScales();
     }
 }

@@ -12,11 +12,12 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+@x.Count
 
 @foreach (var y in x)
 {
     <ScaleCard scale=y />
-})
+}
 
 @code {
     private int currentCount = 0;

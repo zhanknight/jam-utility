@@ -64,7 +64,7 @@ public static class ScaleBuilder
                     }
         }
         
-        return builtScales;
+        return builtScales.OrderBy(x => Random.Shared.Next()).ToList();
     } 
 
 }

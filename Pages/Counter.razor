@@ -2,6 +2,7 @@
 @page "/counter"
 @using JamUtility.Models
 @using JamUtility.Components
+@using JamUtility.Utilities
 
 <PageTitle>Counter</PageTitle>
 
@@ -27,6 +28,7 @@
     List<Scale> x = new List<Scale>();
     protected override async Task OnInitializedAsync()
     {
-         x = Scales.GetScales();
+         // x = Scales.GetScales();
+        x = ScaleBuilder.BuildScales();
     }
 }

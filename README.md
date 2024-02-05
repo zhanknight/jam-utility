@@ -6,7 +6,7 @@ Jam Utility creates and filters a library of musical scales. Select the notes in
 
 #### ~~Visit the current deployment of Jam Utility here: [https://jam-utility.herokuapp.com](https://github.com/zhanknight/jam-utility)~~
 *Jam Utility is currently not deployed following Heroku eliminating free deployments.*
-
+*I am currently fully rewriting Jam Utility as a Blazor standalone WASM app. See the blazor-rewrite branch.*
 
 ![Image of Jam Utility](public/JamUtilityScreenshot.png)
 

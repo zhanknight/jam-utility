@@ -11,10 +11,20 @@
 
 <button class="btn btn-primary" @onclick="ShuffleScales">Shuffle Scales</button>
 
-@foreach (var y in x)
-{
-    <ScaleCard scale=y />
-}
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var y in x)
+        {
+            <div class="col-sm m-1">
+                <ScaleCard scale=y />
+            </div>
+
+        }
+    </div>
+</div>
+
 
 @code {
 

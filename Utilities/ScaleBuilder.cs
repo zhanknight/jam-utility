@@ -21,7 +21,7 @@ public static class ScaleBuilder
     //    return scales;
     //}
 
-    public static List<Scale> BuildScales()
+    public static async Task<List<Scale>> BuildScales()
     {
         List<Scale2> definitions = new List<Scale2>();
 
@@ -36,13 +36,16 @@ public static class ScaleBuilder
         definitions.AddRange(new List<Scale2> { minor, major, dorian, phrygian, lydian, mixolydian, locrian });
 
 
-        List<Scale> builtScales = new List<Scale>();
+
 
         List<string> allnotes = new List<string> 
                    { "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab",
                    "A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab" };
 
-        for (int i = 0; i < 11; i++)
+        var result = await Task.Run(() =>
+        {
+        List<Scale> builtScales = new List<Scale>();
+            for (int i = 0; i < 11; i++)
         {
 
             foreach (var s in definitions) 
@@ -63,8 +66,9 @@ public static class ScaleBuilder
                         builtScales.Add(newscale);
                     }
         }
-        
         return builtScales.OrderBy(x => Random.Shared.Next()).ToList();
+        });
+        return result;
     } 
 
 }

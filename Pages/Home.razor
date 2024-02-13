@@ -23,7 +23,7 @@
     protected override async Task OnInitializedAsync()
     {
         // x = Scales.GetScales();
-        x = ScaleBuilder.BuildScales();
+        x = await ScaleBuilder.BuildScales();
     }
     
     private void ShuffleScales()

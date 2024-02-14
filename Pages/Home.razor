@@ -2,6 +2,8 @@
 @using JamUtility.Models
 @using JamUtility.Components
 @using JamUtility.Utilities
+@using JamUtility.Services
+@inject IScaleLibrary ScaleLibrary
 
 <PageTitle>Jam Utility</PageTitle>
 
@@ -9,11 +11,14 @@
 
 
     <div class="mx-auto" style="width: 300px;">
-        <PianoKeys />
+        <PianoKeys ParentMethod="ParentMethod" />
 
     <p role="status" class="mx-auto">Scale count: @x.Count</p>
 
     <button class="btn btn-primary" @onclick="ShuffleScales">Shuffle Scales</button>
+
+        <button class="btn btn-primary" @onclick="() => FilterIt(selectedNotees)">Filter Scales</button>
+
     </div>
 
 </div>
@@ -24,7 +29,7 @@
         @foreach (var y in x)
         {
             <div class="col-sm m-1">
-                <ScaleCard scale=y />
+                <ScaleCard scale=y  />
             </div>
 
         }
@@ -37,14 +42,35 @@
 
     List<Scale> x = new List<Scale>();
 
+    List<string> selectedNotees = new();
+
     protected override async Task OnInitializedAsync()
     {
-        // x = Scales.GetScales();
-        x = await ScaleBuilder.BuildScales();
+        x = await ScaleLibrary.GetScalesAsync();
     }
-    
+
     private void ShuffleScales()
     {
         x = x.OrderBy(s => Random.Shared.Next()).ToList();
+    }
+
+    private  void AddNoteToFilter(string note)
+    {
+        selectedNotees.Add(note);
+    }
+
+    private async void FilterIt(List<string> notes)
+    {
+        await ScaleLibrary.FilterScales(notes);
+        x = await ScaleLibrary.GetScalesAsync();
+    }
+
+
+    private string message = string.Empty;
+
+    private void ParentMethod(string message)
+    {
+        Console.WriteLine(message);
+        AddNoteToFilter(message);
     }
 }

@@ -2,20 +2,34 @@
 
  <div class="col-md-6 d-flex justify-content-center flex-wrap">
     <div id="piano-keyboard">
-        <div class="key key-natural"></div>
-        <div class="key key-sharp"></div>
-        <div class="key key-natural"></div>
-        <div class="key key-sharp"></div>
-        <div class="key key-natural"></div>
-        <div class="key key-natural"></div>
-        <div class="key key-sharp"></div>
-        <div class="key key-natural"></div>
-        <div class="key key-sharp"></div>
+        <div class="key key-natural" @onclick="@(() => CallMethodParent("C"))"></div>
+        <div class="key key-sharp" @onclick="@(() => CallMethodParent("C#"))"></div>
+        <div class="key key-natural" @onclick="@(() => CallMethodParent("D"))"></div>
+        <div class="key key-sharp" @onclick="@(() => CallMethodParent("D#"))"></div>
+        <div class="key key-natural" @onclick="@(() => CallMethodParent("E"))"></div>
+        <div class="key key-natural" @onclick="@(() => CallMethodParent("F"))"></div>
+        <div class="key key-sharp" @onclick="@(() => CallMethodParent("F#"))"></div>
+        <div class="key key-natural" @onclick="@(() => CallMethodParent("G"))"></div>
+        <div class="key key-sharp" @onclick="@(() => CallMethodParent("G#"))"></div>
+        <div class="key key-natural" @onclick="@(() => CallMethodParent("A"))"></div>
+        <div class="key key-sharp" @onclick="@(() => CallMethodParent("A#"))"></div>
+        <div class="key key-natural" @onclick="@(() => CallMethodParent("B"))"></div>
     </div>
 </div>
 
 @code {
 
+    string a = "A";
+    [Parameter]
+    public EventCallback<string> ParentMethod { get; set; }
 
+    private async Task CallMethodParent(string n)
+    {
+        Console.WriteLine("CallMethodParent");
+        if (ParentMethod.HasDelegate)
+        {
+            await ParentMethod.InvokeAsync(n);
+        }
+    }
 
 }

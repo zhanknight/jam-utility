@@ -5,12 +5,18 @@
 
 <PageTitle>Jam Utility</PageTitle>
 
-<h1>Jam Utility</h1>
+<div class="container">
 
-<p role="status">Scale count: @x.Count</p>
 
-<button class="btn btn-primary" @onclick="ShuffleScales">Shuffle Scales</button>
+    <div class="mx-auto" style="width: 300px;">
+        <PianoKeys />
 
+    <p role="status" class="mx-auto">Scale count: @x.Count</p>
+
+    <button class="btn btn-primary" @onclick="ShuffleScales">Shuffle Scales</button>
+    </div>
+
+</div>
 
 
 <div class="container">
@@ -24,6 +30,7 @@
         }
     </div>
 </div>
+
 
 
 @code {

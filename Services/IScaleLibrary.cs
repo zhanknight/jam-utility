@@ -4,8 +4,8 @@ namespace JamUtility.Services
 {
     public interface IScaleLibrary
     {
-        List<Note> GetNotes();
-        Task<List<Scale>> GetScalesAsync();
-        Task FilterScales(List<string> notes);
+        List<Scale> InitializeScales();
+        List<Scale> GetActiveScales();
+        void FilterScales(List<string> notes);
     }
 }

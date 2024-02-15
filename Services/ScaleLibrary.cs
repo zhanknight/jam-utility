@@ -1,6 +1,5 @@
 ﻿using JamUtility.Models;
 using JamUtility.Utilities;
-using System.Linq;
 
 namespace JamUtility.Services;
 
@@ -8,29 +7,26 @@ public class ScaleLibrary : IScaleLibrary
 {
     List<Scale> AllScales = new List<Scale>();
     List<Scale> FilteredScales = new List<Scale>();
-    List<Note> Notes = new List<Note>();
+
     public ScaleLibrary()
     {
         AllScales = ScaleBuilder.BuildScales();
-        FilteredScales = AllScales;
     }
 
-    public async Task<List<Scale>> GetScalesAsync()
+    public List<Scale> InitializeScales()
     {
-
+        FilteredScales = AllScales;
         return FilteredScales;
     }
 
-    public async Task FilterScales(List<string> notes)
+    public List<Scale> GetActiveScales()
     {
-
-        var y = AllScales.Where(a => notes.All(itm2 => a.Notes.Contains(itm2))).ToList();
-
-        FilteredScales = y;
+        return FilteredScales;
     }
 
-    public List<Note> GetNotes()
+    public void FilterScales(List<string> notes)
     {
-        return Notes;
+        FilteredScales = AllScales.Where(a => notes.All(n => a.Notes.Contains(n))).ToList();
     }
+
 }

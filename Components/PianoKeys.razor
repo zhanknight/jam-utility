@@ -19,16 +19,14 @@
 
 @code {
 
-    string a = "A";
     [Parameter]
     public EventCallback<string> ParentMethod { get; set; }
 
-    private async Task CallMethodParent(string n)
+    private async Task CallMethodParent(string clickedNote)
     {
-        Console.WriteLine("CallMethodParent");
         if (ParentMethod.HasDelegate)
         {
-            await ParentMethod.InvokeAsync(n);
+            await ParentMethod.InvokeAsync(clickedNote);
         }
     }
 

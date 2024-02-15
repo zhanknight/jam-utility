@@ -11,13 +11,13 @@
 
 
     <div class="mx-auto" style="width: 300px;">
-        <PianoKeys ParentMethod="ParentMethod" />
+        <PianoKeys ParentMethod="HandleNoteSelections" />
 
-    <p role="status" class="mx-auto">Scale count: @x.Count</p>
+        <p role="status" class="mx-auto">Scale count: @activeScales.Count</p>
 
     <button class="btn btn-primary" @onclick="ShuffleScales">Shuffle Scales</button>
 
-        <button class="btn btn-primary" @onclick="() => FilterIt(selectedNotees)">Filter Scales</button>
+        <button class="btn btn-primary" @onclick="ResetScales">Reset Scales</button>
 
     </div>
 
@@ -26,10 +26,10 @@
 
 <div class="container">
     <div class="row">
-        @foreach (var y in x)
+        @foreach (var sc in activeScales)
         {
             <div class="col-sm m-1">
-                <ScaleCard scale=y  />
+                <ScaleCard scale=sc />
             </div>
 
         }
@@ -40,18 +40,18 @@
 
 @code {
 
-    List<Scale> x = new List<Scale>();
+    List<Scale> activeScales = new List<Scale>();
 
     List<string> selectedNotees = new();
 
     protected override async Task OnInitializedAsync()
     {
-        x = await ScaleLibrary.GetScalesAsync();
+        activeScales = ScaleLibrary.InitializeScales();
     }
 
     private void ShuffleScales()
     {
-        x = x.OrderBy(s => Random.Shared.Next()).ToList();
+        activeScales = activeScales.OrderBy(s => Random.Shared.Next()).ToList();
     }
 
     private  void AddNoteToFilter(string note)
@@ -59,18 +59,36 @@
         selectedNotees.Add(note);
     }
 
-    private async void FilterIt(List<string> notes)
+    private void RemoveNoteFromFilter(string note)
     {
-        await ScaleLibrary.FilterScales(notes);
-        x = await ScaleLibrary.GetScalesAsync();
+        selectedNotees.Remove(note);
     }
 
-
-    private string message = string.Empty;
-
-    private void ParentMethod(string message)
+    private void FilterIt(List<string> notes)
     {
+        ScaleLibrary.FilterScales(notes);
+        activeScales = ScaleLibrary.GetActiveScales();
+    }
+
+    private void ResetScales()
+    {
+        selectedNotees.Clear();
+        FilterIt(selectedNotees);
+    }
+
+    private void HandleNoteSelections(string message)
+    {
+        if (selectedNotees.Contains(message))
+        {
+            RemoveNoteFromFilter(message);
+        }
+        else 
+        {
+            AddNoteToFilter(message);
+        }
+
         Console.WriteLine(message);
-        AddNoteToFilter(message);
+
+        FilterIt(selectedNotees);
     }
 }

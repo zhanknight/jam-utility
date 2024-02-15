@@ -9,30 +9,52 @@
 
 <div class="container">
 
+    <div class="row justify-content-center">
+    <NoteSelector ParentMethod="HandleNoteSelections" />
+    </div>
+
+    <div class="row d-flex justify-content-center">
+
+        <div class="col col-sm-2">
+            
+        </div>
 
 
+        <div class="col col-sm-auto d-flex flex-fill justify-content-center">
+            <p class="mt-0 mb-1 mx-1">Scale count: @activeScales.Count</p>
+            <button class="btn btn-primary p-0 mt-0 mb-1 mx-1" @onclick="ShuffleScales">Shuffle Scales</button>
 
-        <NoteSelector ParentMethod="HandleNoteSelections" />
-
-        <p role="status" class="mx-auto">Scale count: @activeScales.Count</p>
-
-    <button class="btn btn-primary" @onclick="ShuffleScales">Shuffle Scales</button>
+        </div>
 
 
+        <div class="col col-sm-2">
+            
+        </div>
+
+    </div>
 
 </div>
 
-
 <div class="container">
-    <div class="row">
-        @foreach (var sc in activeScales)
-        {
-            <div class="col-sm m-1">
-                <ScaleCard scale=sc />
+    @if(activeScales.Count == 0)
+    {
+        <div class="row justify-content-center">
+            <div class="col p-2">
+                <p>No scales found that contain all selected notes!</p>
             </div>
-
-        }
-    </div>
+        </div>
+    }
+    else
+    {
+        <div class="row justify-content-center p-0">
+            @foreach (var sc in activeScales)
+            {
+                <div class="col m-1 d-flex justify-content-center ">
+                    <ScaleCard scale=sc />
+                </div>
+            }
+        </div>
+    }
 </div>
 
 

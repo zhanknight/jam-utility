@@ -33,14 +33,17 @@ public static class ScaleBuilder
                 newscale.Notes.Add(startNote);
                 newscale.Root = startNote;
                 newscale.Type = s.Type;
+
                 foreach (var n in s.Definition)
                 {
                     newscale.Notes.Add(allnotes[n + i]);
                 }
-                foreach (var c in newscale.Notes)
+
+                foreach (var c in s.Chords)
                 {
-                    newscale.Chords.Add(c + s.Chords);
+                    newscale.Chords.Add(newscale.Notes[newscale.Chords.Count] + c);
                 }
+
                 builtScales.Add(newscale);
             }
         }

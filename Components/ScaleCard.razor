@@ -1,27 +1,29 @@
 ﻿@using JamUtility.Models
+
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">@scale.Root @scale.Type
-    </h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <h5 class="card-title">@scale.Root @scale.Type</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Notes and Chords:</h6>
 
-    <p class="card-text">
-    @foreach (var note in scale.Notes)
-    {
-        @(note + ", ")
-    }
+        <p class="card-text">
+            @foreach (var note in scale.Notes)
+            {
+                @(note + ", ")
+            }
+        </p>
+
+        <p class="card-text">
+            @foreach (var chord in scale.Chords)
+            {
+                @(chord + ", ")
+            }
         </p>
 
   </div>
 
 </div>
 
-
-
-
 @code {
-
     [Parameter]
     public Scale? scale { get; set; }
-
 }

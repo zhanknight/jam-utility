@@ -17,8 +17,6 @@
 
     <button class="btn btn-primary" @onclick="ShuffleScales">Shuffle Scales</button>
 
-        <button class="btn btn-primary" @onclick="ResetScales">Reset Scales</button>
-
     </div>
 
 </div>
@@ -68,12 +66,6 @@
     {
         ScaleLibrary.FilterScales(notes);
         activeScales = ScaleLibrary.GetActiveScales();
-    }
-
-    private void ResetScales()
-    {
-        selectedNotees.Clear();
-        FilterIt(selectedNotees);
     }
 
     private void HandleNoteSelections(string message)

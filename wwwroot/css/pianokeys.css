@@ -1,7 +1,7 @@
 
 :root {
     --natural-key-width: 48px;
-    --natural-key-height: 60px;
+    --natural-key-height: 66px;
     --sharp-key-width: 30px;
     --sharp-key-height: 40px;
 }
@@ -25,25 +25,26 @@
     position: relative;
     width: var(--sharp-key-width);
     height: var(--sharp-key-height);
-    background: #36454f;
+    background: #4cff00;
     box-sizing: border-box;
     z-index: 1;
     transform: translateX(-50%);
+    color: white;
 }
 
-    .key-sharp + .key-natural {
-        margin-left: calc(-1 * var(--sharp-key-width));
-    }
+.key-sharp + .key-natural {
+    margin-left: calc(-1 * var(--sharp-key-width));
+}
 
-    .key-natural.active::after,
-    .key-sharp.active::after {
-        content: "";
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: red;
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.key-natural.active::after,
+.key-sharp.active::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}

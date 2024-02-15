@@ -1,6 +1,6 @@
 ﻿namespace JamUtility.Models;
 
-public class Scale2
+public class ScaleDefinition
 {
     public int Id { get; set; }
     public string Type { get; set; }

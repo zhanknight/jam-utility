@@ -10,14 +10,15 @@
 <div class="container">
 
 
-    <div class="mx-auto" style="width: 300px;">
-        <PianoKeys ParentMethod="HandleNoteSelections" />
+
+
+        <NoteSelector ParentMethod="HandleNoteSelections" />
 
         <p role="status" class="mx-auto">Scale count: @activeScales.Count</p>
 
     <button class="btn btn-primary" @onclick="ShuffleScales">Shuffle Scales</button>
 
-    </div>
+
 
 </div>
 

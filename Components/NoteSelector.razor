@@ -1,0 +1,51 @@
+﻿@using JamUtility.Models
+
+<div class="container">
+    <div class="row">
+        <div class="col border p-0 text-center @(selectedNotes.Contains("C") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("C"))">C</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("C#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("C#"))">C#</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("D") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("D"))">D</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("D#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("D#"))">D#</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("E") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("E"))">E</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("F") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("F"))">F</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("F#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("F#"))">F#</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("G") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("G"))">G</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("G#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("G#"))">G#</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("A") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("A"))">A</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("A#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("A#"))">A#</div>
+        <div class="col border p-0 text-center @(selectedNotes.Contains("B") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("B"))">B</div>
+    </div>
+</div>
+
+
+
+@code {
+    [Parameter]
+    public EventCallback<string> ParentMethod { get; set; }
+
+    List<string> selectedNotes = new List<string>();
+
+    private bool ToggleSelected(string note)
+    {
+        if (selectedNotes.Contains(note))
+        {
+            selectedNotes.Remove(note);
+            return false;
+        }
+        else
+        {
+            selectedNotes.Add(note);
+            return true;
+        };
+    }
+
+
+    private async Task CallMethodParent(string clickedNote)
+    {
+        if (ParentMethod.HasDelegate)
+        {
+            await ParentMethod.InvokeAsync(clickedNote);
+        }
+        ToggleSelected(clickedNote);
+    }
+}

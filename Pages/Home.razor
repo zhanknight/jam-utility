@@ -9,14 +9,14 @@
 
 <div class="container">
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center bg-white rounded-top shadow-sm ">
         <div class="col-sm-8">
             <NoteSelector ParentMethod="HandleNoteSelections" />
         </div>
     
     </div>
 
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center bg-white rounded-bottom shadow-sm">
 
         <div class="col col-sm-2">
             
@@ -36,30 +36,32 @@
 
     </div>
 
-</div>
-
-<div class="container">
-    @if(activeScales.Count == 0)
-    {
-        <div class="row justify-content-center">
-            <div class="col p-2">
-                <p>No scales found that contain all selected notes!</p>
-            </div>
-        </div>
-    }
-    else
-    {
-        <div class="row justify-content-center p-0">
-            @foreach (var sc in activeScales)
-            {
-                <div class="col m-1 d-flex justify-content-center ">
-                    <ScaleCard scale=sc />
+    <div class="row justify-content-center g-0 p-0">
+        @if (activeScales.Count == 0)
+        {
+            <div class="row justify-content-center">
+                <div class="col p-2">
+                    <p>No scales found that contain all selected notes!</p>
                 </div>
-            }
-        </div>
-    }
-</div>
+            </div>
+        }
+        else
+        {
 
+                @foreach (var sc in activeScales)
+                {
+                <div class="col-sm-12 col-xs-12 col-md-5 col-lg-5  p-0 justify-content-center m-1">
+                        <ScaleCard scale=sc />
+                    </div>
+                }
+
+        }
+    </div>
+
+@* <div class="container">
+
+</div> *@
+</div>
 
 
 @code {

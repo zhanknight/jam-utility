@@ -3,7 +3,7 @@
 @inject IScaleLibrary ScaleLibrary
 
 <div class="container">
-    <div class="row shadow-sm mb-2">
+    <div class="row shadow-sm mb-2 mt-2">
         <div class="col border p-0 text-center rounded-start @(localSelectedNotes.Contains("C") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("C"))">C</div>
         <div class="col border p-0 text-center @(localSelectedNotes.Contains("C#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("C#"))">C#</div>
         <div class="col border p-0 text-center @(localSelectedNotes.Contains("D") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("D"))">D</div>

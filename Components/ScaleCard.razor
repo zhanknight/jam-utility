@@ -1,8 +1,11 @@
 ﻿@using JamUtility.Models
 
-<div class="card w-auto shadow-sm">
+<div class="card w-auto border border-dark shadow-sm">
+    <div class="card-header @(scale.Type) potato">
+        <h5 class="card-title">@scale.Root @scale.Type</h5>
+    </div>
   <div class="card-body">
-    <h5 class="card-title">@scale.Root @scale.Type</h5>
+
     <h6 class="card-subtitle mb-2 text-muted">Notes and Chords:</h6>
 
         <p class="card-text">

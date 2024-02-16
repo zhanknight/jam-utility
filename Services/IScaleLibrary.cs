@@ -6,6 +6,8 @@ namespace JamUtility.Services
     {
         List<Scale> InitializeScales();
         List<Scale> GetActiveScales();
-        void FilterScales(List<string> notes);
+        void SetSelectedNotes(List<string> notes);
+        List<string> GetSelectedNotes();
+        void ClearSelectedNotes();
     }
 }

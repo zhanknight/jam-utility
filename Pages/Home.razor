@@ -63,7 +63,7 @@
 
     List<Scale> activeScales = new List<Scale>();
 
-    List<string> selectedNotees = new();
+    // List<string> selectedNotees = new();
 
     protected override async Task OnInitializedAsync()
     {
@@ -75,35 +75,24 @@
         activeScales = activeScales.OrderBy(s => Random.Shared.Next()).ToList();
     }
 
-    private  void AddNoteToFilter(string note)
-    {
-        selectedNotees.Add(note);
-    }
+    // private  void AddNoteToFilter(string note)
+    // {
+    //     selectedNotees.Add(note);
+    // }
 
-    private void RemoveNoteFromFilter(string note)
-    {
-        selectedNotees.Remove(note);
-    }
+    // private void RemoveNoteFromFilter(string note)
+    // {
+    //     selectedNotees.Remove(note);
+    // }
 
-    private void FilterIt(List<string> notes)
+    // private void FilterIt(List<string> notes)
+    // {
+    //     ScaleLibrary.FilterScales(notes);
+    //     activeScales = ScaleLibrary.GetActiveScales();
+    // }
+
+    private void HandleNoteSelections()
     {
-        ScaleLibrary.FilterScales(notes);
         activeScales = ScaleLibrary.GetActiveScales();
-    }
-
-    private void HandleNoteSelections(string message)
-    {
-        if (selectedNotees.Contains(message))
-        {
-            RemoveNoteFromFilter(message);
-        }
-        else 
-        {
-            AddNoteToFilter(message);
-        }
-
-        Console.WriteLine(message);
-
-        FilterIt(selectedNotees);
     }
 }

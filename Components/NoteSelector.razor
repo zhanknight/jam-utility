@@ -3,19 +3,19 @@
 @inject IScaleLibrary ScaleLibrary
 
 <div class="container">
-    <div class="row">
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("C") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("C"))">C</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("C#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("C#"))">C#</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("D") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("D"))">D</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("D#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("D#"))">D#</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("E") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("E"))">E</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("F") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("F"))">F</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("F#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("F#"))">F#</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("G") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("G"))">G</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("G#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("G#"))">G#</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("A") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("A"))">A</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("A#") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("A#"))">A#</div>
-        <div class="col border p-0 text-center @(localSelectedNotes.Contains("B") ? "bg-info" : "")" @onclick="@(() => CallMethodParent("B"))">B</div>
+    <div class="row shadow-sm mb-2">
+        <div class="col border p-0 text-center rounded-start @(localSelectedNotes.Contains("C") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("C"))">C</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("C#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("C#"))">C#</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("D") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("D"))">D</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("D#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("D#"))">D#</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("E") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("E"))">E</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("F") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("F"))">F</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("F#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("F#"))">F#</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("G") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("G"))">G</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("G#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("G#"))">G#</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("A") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("A"))">A</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("A#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("A#"))">A#</div>
+        <div class="col border p-0 text-center rounded-end @(localSelectedNotes.Contains("B") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("B"))">B</div>
     </div>
 </div>
 

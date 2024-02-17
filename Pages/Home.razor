@@ -16,7 +16,7 @@
     
     </div>
 
-    <div class="row d-flex justify-content-center bg-white rounded-bottom shadow-sm border-start border-bottom border-end border-dark">
+    <div class="row d-flex justify-content-center bg-white rounded-bottom shadow-sm border-start border-bottom border-end border-dark mb-1">
 
         <div class="col col-sm-2">
             
@@ -36,7 +36,7 @@
 
     </div>
 
-    <div class="row justify-content-center g-0 p-0">
+    <div class="row   justify-content-between">
         @if (activeScales.Count == 0)
         {
             <div class="row justify-content-center">
@@ -50,7 +50,7 @@
 
                 @foreach (var sc in activeScales)
                 {
-                <div class="col-sm-12 col-xs-12 col-md-5 col-lg-5  p-0 justify-content-center m-1">
+                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-6 p-0">
                         <ScaleCard scale=sc />
                     </div>
                 }

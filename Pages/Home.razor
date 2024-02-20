@@ -1,0 +1,103 @@
+﻿@page "/"
+@using JamUtility.Models
+@using JamUtility.Components
+@using JamUtility.Utilities
+@using JamUtility.Services
+@inject IScaleLibrary ScaleLibrary
+
+<PageTitle>Jam Utility</PageTitle>
+
+<div class="container">
+
+    <div class="row justify-content-center bg-white rounded-top shadow-sm border-start border-top border-end border-dark">
+        <div class="col-sm-8">
+            <NoteSelector ParentMethod="HandleNoteSelections" />
+        </div>
+    
+    </div>
+
+    <div class="row d-flex justify-content-center bg-white rounded-bottom shadow-sm border-start border-bottom border-end border-dark mb-1">
+
+        <div class="col col-sm-2">
+            
+        </div>
+
+
+        <div class="col col-sm-auto d-flex flex-fill justify-content-center">
+            <p class="mt-0 mb-1 mx-1">Scale count: @activeScales.Count</p>
+            <button class="btn btn-primary p-0 mt-0 mb-1 mx-1" @onclick="ShuffleScales">Shuffle Scales</button>
+
+        </div>
+
+
+        <div class="col col-sm-2">
+            
+        </div>
+
+    </div>
+
+    <div class="row   justify-content-between">
+        @if (activeScales.Count == 0)
+        {
+            <div class="row justify-content-center">
+                <div class="col p-2">
+                    <p>No scales found that contain all selected notes!</p>
+                </div>
+            </div>
+        }
+        else
+        {
+
+                @foreach (var sc in activeScales)
+                {
+                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-6 p-0">
+                        <ScaleCard scale=sc />
+                    </div>
+                }
+
+        }
+    </div>
+
+@* <div class="container">
+
+</div> *@
+</div>
+
+
+@code {
+
+    List<Scale> activeScales = new List<Scale>();
+
+    // List<string> selectedNotees = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        activeScales = ScaleLibrary.InitializeScales();
+    }
+
+    private void ShuffleScales()
+    {
+        activeScales = activeScales.OrderBy(s => Random.Shared.Next()).ToList();
+    }
+
+    // private  void AddNoteToFilter(string note)
+    // {
+    //     selectedNotees.Add(note);
+    // }
+
+    // private void RemoveNoteFromFilter(string note)
+    // {
+    //     selectedNotees.Remove(note);
+    // }
+
+    // private void FilterIt(List<string> notes)
+    // {
+    //     ScaleLibrary.FilterScales(notes);
+    //     activeScales = ScaleLibrary.GetActiveScales();
+    // }
+
+    private void HandleNoteSelections()
+    {
+        activeScales = ScaleLibrary.GetActiveScales();
+    }
+}

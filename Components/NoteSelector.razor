@@ -1,0 +1,58 @@
+﻿@using JamUtility.Models
+@using JamUtility.Services
+@inject IScaleLibrary ScaleLibrary
+
+<div class="container">
+    <div class="row shadow-sm mb-2 mt-2">
+        <div class="col border p-0 text-center rounded-start @(localSelectedNotes.Contains("C") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("C"))">C</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("C#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("C#"))">C#</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("D") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("D"))">D</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("D#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("D#"))">D#</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("E") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("E"))">E</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("F") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("F"))">F</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("F#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("F#"))">F#</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("G") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("G"))">G</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("G#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("G#"))">G#</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("A") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("A"))">A</div>
+        <div class="col border p-0 text-center @(localSelectedNotes.Contains("A#") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("A#"))">A#</div>
+        <div class="col border p-0 text-center rounded-end @(localSelectedNotes.Contains("B") ? "bg-info" : "bg-white")" @onclick="@(() => CallMethodParent("B"))">B</div>
+    </div>
+</div>
+
+
+
+@code {
+    [Parameter]
+    public EventCallback<string> ParentMethod { get; set; }
+
+    List<string> localSelectedNotes = new List<string>();
+
+    protected override void OnInitialized()
+    {
+        localSelectedNotes = ScaleLibrary.GetSelectedNotes();
+    }
+
+    private void ToggleSelected(string note)
+    {
+        if (localSelectedNotes.Contains(note))
+        {
+            localSelectedNotes.Remove(note);
+            ScaleLibrary.SetSelectedNotes(localSelectedNotes);
+        }
+        else
+        {
+            localSelectedNotes.Add(note);
+            ScaleLibrary.SetSelectedNotes(localSelectedNotes);
+        }
+    }
+
+
+    private async Task CallMethodParent(string clickedNote)
+    {
+        ToggleSelected(clickedNote);       
+        if (ParentMethod.HasDelegate)
+        {
+            await ParentMethod.InvokeAsync();
+        }
+    }
+}

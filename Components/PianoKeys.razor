@@ -1,0 +1,49 @@
+﻿@using JamUtility.Models
+
+ <div class="col-md-6 d-flex justify-content-center flex-wrap">
+    <div id="piano-keyboard">
+        <div class="key key-natural d-flex align-items-end @(selectedNotes.Contains("C") ? "active" : "")" @onclick="@(() => CallMethodParent("C"))">C</div>
+        <div class="key key-sharp d-flex align-items-end @(selectedNotes.Contains("C#") ? "active" : "")" @onclick="@(() => CallMethodParent("C#"))">C#</div>
+        <div class="key key-natural d-flex align-items-end @(selectedNotes.Contains("D") ? "active" : "")" @onclick="@(() => CallMethodParent("D"))">D</div>
+        <div class="key key-sharp d-flex align-items-end @(selectedNotes.Contains("D#") ? "active" : "")" @onclick="@(() => CallMethodParent("D#"))">D#</div>
+        <div class="key key-natural d-flex align-items-end @(selectedNotes.Contains("E") ? "active" : "")" @onclick="@(() => CallMethodParent("E"))">E</div>
+        <div class="key key-natural d-flex align-items-end @(selectedNotes.Contains("F") ? "active" : "")" @onclick="@(() => CallMethodParent("F"))">F</div>
+        <div class="key key-sharp d-flex align-items-end @(selectedNotes.Contains("F#") ? "active" : "")" @onclick="@(() => CallMethodParent("F#"))">F#</div>
+        <div class="key key-natural d-flex align-items-end @(selectedNotes.Contains("G") ? "active" : "")" @onclick="@(() => CallMethodParent("G"))">G</div>
+        <div class="key key-sharp d-flex align-items-end @(selectedNotes.Contains("G#") ? "active" : "")" @onclick="@(() => CallMethodParent("G#"))">G#</div>
+        <div class="key key-natural d-flex align-items-end @(selectedNotes.Contains("A") ? "active" : "")" @onclick="@(() => CallMethodParent("A"))">A</div>
+        <div class="key key-sharp d-flex align-items-end @(selectedNotes.Contains("A#") ? "active" : "")" @onclick="@(() => CallMethodParent("A#"))">A#</div>
+        <div class="key key-natural d-flex align-items-end @(selectedNotes.Contains("B") ? "active" : "")" @onclick="@(() => CallMethodParent("B"))">B</div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public EventCallback<string> ParentMethod { get; set; }
+
+    List<string> selectedNotes = new List<string>();
+
+    private bool ToggleSelected(string note)
+    {
+        if (selectedNotes.Contains(note))
+        {
+            selectedNotes.Remove(note);
+            return false;
+        }
+        else
+        {
+            selectedNotes.Add(note);
+            return true;
+        };
+    }
+
+
+    private async Task CallMethodParent(string clickedNote)
+    {
+        if (ParentMethod.HasDelegate)
+        {
+            await ParentMethod.InvokeAsync(clickedNote);
+        }
+        ToggleSelected(clickedNote);
+    }
+}

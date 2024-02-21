@@ -6,12 +6,11 @@ public static class ScaleBuilder
 {
     public static List<string> AllNotes()
     {
-        return
-                   [ "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#",
-                   "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" ];
+        return [ "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#",
+                 "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" ];
     }
 
-    public static  List<Scale> BuildScales()
+    private static List<ScaleDefinition> ScaleDefinitions()
     {
         List<ScaleDefinition> definitions = new List<ScaleDefinition>();
 
@@ -24,6 +23,13 @@ public static class ScaleBuilder
         ScaleDefinition locrian = new ScaleDefinition { Id = 6, Type = "Locrian", Definition = [1, 3, 5, 6, 8, 10], Chords = ["Dim", "Maj", "Min", "Min", "Maj", "Maj", "Min"] };
 
         definitions.AddRange(new List<ScaleDefinition> { minor, major, dorian, phrygian, lydian, mixolydian, locrian });
+
+        return definitions;
+    }
+
+    public static  List<Scale> BuildScales()
+    {
+        List<ScaleDefinition> definitions = ScaleDefinitions();
 
         List<string> allnotes = AllNotes();
 

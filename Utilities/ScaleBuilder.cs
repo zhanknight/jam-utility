@@ -4,6 +4,13 @@ namespace JamUtility.Utilities;
 
 public static class ScaleBuilder
 {
+    public static List<string> AllNotes()
+    {
+        return
+                   [ "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#",
+                   "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" ];
+    }
+
     public static  List<Scale> BuildScales()
     {
         List<ScaleDefinition> definitions = new List<ScaleDefinition>();
@@ -18,10 +25,8 @@ public static class ScaleBuilder
 
         definitions.AddRange(new List<ScaleDefinition> { minor, major, dorian, phrygian, lydian, mixolydian, locrian });
 
-        List<string> allnotes = new List<string> 
-                   { "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#",
-                   "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" };
-  
+        List<string> allnotes = AllNotes();
+
         List<Scale> builtScales = new List<Scale>();
             
         for (int i = 0; i < 11; i++)

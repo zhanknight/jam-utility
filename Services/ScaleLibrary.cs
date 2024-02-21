@@ -20,6 +20,11 @@ public class ScaleLibrary : IScaleLibrary
         return FilteredScales;
     }
 
+    public List<string> GetAllNotes()
+    {
+        return ScaleBuilder.AllNotes().Distinct().ToList();
+    }
+
     public void SetSelectedNotes(List<string> notes)
     {
         SelectedNotes = notes;

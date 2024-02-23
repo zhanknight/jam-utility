@@ -2,7 +2,11 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ feature/workflows-for-v2 ]
+    branches:  
+      - master
+    paths-ignore:
+      - '**/README.md'
+      - '**/JamUtilityScreenshot.png'
 
 jobs:
   deploy-to-github-pages:

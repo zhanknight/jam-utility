@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ feature/workflows-for-v2 ]
 
 jobs:
   deploy-to-github-pages:

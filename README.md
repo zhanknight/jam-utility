@@ -1,3 +1,7 @@
+![Build and Deploy](https://github.com/github/docs/actions/workflows/deploy.yml/badge.svg) 
+
+[Try Jam Utility Here!](https://zhanknight.github.io/jam-utility/)
+
 ## Jam Utility 
 *This was recently completely rewritten as a Blazor WebAssembly app. It is functional but still rough around the edges.*
 *The original V1 version of Jam Utility can be found in the Jam-Utility-V1-React branch.*

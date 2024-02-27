@@ -1,4 +1,4 @@
-![Build and Deploy](https://github.com/github/docs/actions/workflows/deploy.yml/badge.svg) 
+![Build and Deploy](https://github.com/zhanknight/jam-utility/actions/workflows/deploy.yml/badge.svg) 
 
 [Try Jam Utility Here!](https://zhanknight.github.io/jam-utility/)
 

@@ -39,6 +39,7 @@ public class ScaleLibrary : IScaleLibrary
     public void ClearSelectedNotes()
     {
         SelectedNotes.Clear();
+        FilterScales(SelectedNotes);
     }
 
     public List<Scale> GetActiveScales()

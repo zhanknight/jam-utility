@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "JamUtility",
   "resources": {
-    "hash": "sha256-49CvTneDHKbxxW4Gmdhe70zEstdMjThZx3lzkPp7lrA=",
+    "hash": "sha256-7DvS52IwMyHsf8nli69/ElPLNMSYNipT5y+r0YVuWeo=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.jgt5nhn140.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "JamUtility.wasm": "sha256-IPXEGJPUSvA32WXpqCfipaX6L/98oV3q3vLznPy/HgY=",
+      "JamUtility.wasm": "sha256-Tw+3o1saucUZGC1KcbqNpuN4B/0nvTwFrWSXu4NFQgQ=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-JdfMfAkUbzvgtsvWev3bkmD3rZA32exwXIhYjba+8Ag=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-+AeGjj5Wt7MXCBN/RE7iGr6POmyixEMA42E+6DHDetM=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-d6tN87QrJstiTMcLaUtZ6TWiNHa8A74Suuzx95thRrE=",

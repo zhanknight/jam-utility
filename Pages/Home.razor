@@ -19,8 +19,9 @@
         <div class="col col-sm-2"></div>
 
         <div class="col col-sm-auto d-flex flex-fill justify-content-center">
-            <p class="mt-0 mb-1 mx-1">Scale count: @activeScales.Count</p>
             <button class="btn btn-primary p-0 mt-0 mb-1 mx-1" @onclick="ShuffleScales">Shuffle Scales</button>
+            <p class="mt-0 mb-1 mx-1">Scale count: @activeScales.Count</p>
+            <button class="btn btn-primary p-0 mt-0 mb-1 mx-1" @onclick="ClearSelectedNotes">Reset</button>
         </div>
 
         <div class="col col-sm-2"></div>
@@ -63,6 +64,12 @@
 
     private void HandleNoteSelections()
     {
+        activeScales = ScaleLibrary.GetActiveScales();
+    }
+
+    private void ClearSelectedNotes()
+    {
+        ScaleLibrary.ClearSelectedNotes();
         activeScales = ScaleLibrary.GetActiveScales();
     }
 }

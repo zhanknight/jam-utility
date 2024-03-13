@@ -18,6 +18,12 @@ jobs:
       with:
         dotnet-version: 8.0
 
+    - name: Add current commit hash as patch version
+      run: |
+        buildVer=$($GITHUB_SHA | cut -c1-7)
+        echo "Build version: $buildVer from $GITHUB_SHA"
+        sed -i 's/wxyz/'"$buildVer"'/' Layout/MainLayout.razor
+
     - name: Publish .NET Core Project
       run: dotnet publish JamUtility.csproj -c Release -o release --nologo
     

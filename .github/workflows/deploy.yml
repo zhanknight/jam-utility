@@ -20,8 +20,8 @@ jobs:
 
     - name: Add current commit hash as patch version
       run: |
-        buildVer=$($GITHUB_SHA | cut -c1-7)
-        echo "Build version: $buildVer from $GITHUB_SHA"
+        buildVer=$(echo $GITHUB_SHA | cut -c1-7)
+        echo "Patch version: $buildVer from $GITHUB_SHA"
         sed -i 's/wxyz/'"$buildVer"'/' Layout/MainLayout.razor
 
     - name: Publish .NET Core Project

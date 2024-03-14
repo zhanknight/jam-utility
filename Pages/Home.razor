@@ -9,39 +9,40 @@
 
 <div class="container">
 
-    <div class="row justify-content-center bg-white rounded-top shadow-sm border-start border-top border-end border-dark">
-        <div class="col-sm-8">
-            <NoteSelector ParentMethod="HandleNoteSelections" />
-        </div>
-    </div>
-
-    <div class="row d-flex justify-content-center bg-white rounded-bottom shadow-sm border-start border-bottom border-end border-dark mb-1">
-        <div class="col col-sm-2"></div>
-
-        <div class="col col-sm-auto d-flex flex-fill justify-content-center">
-            <button class="btn btn-primary p-0 mt-0 mb-1 mx-1" @onclick="ShuffleScales">Shuffle Scales</button>
-            <p class="mt-0 mb-1 mx-1">Scale count: @activeScales.Count</p>
-            <button class="btn btn-primary p-0 mt-0 mb-1 mx-1" @onclick="ClearSelectedNotes">Reset</button>
+    <div class="p-1">
+        <div class="row justify-content-center bg-white rounded-top shadow-sm border-start border-top border-end border-dark">
+            <div class="col-sm-8">
+                <NoteSelector ParentMethod="HandleNoteSelections" />
+            </div>
         </div>
 
-        <div class="col col-sm-2"></div>
-    </div>
+        <div class="row d-flex justify-content-center bg-white rounded-bottom shadow-sm border-start border-bottom border-end border-dark mb-1">
+            <div class="col col-sm-2"></div>
 
+            <div class="col col-sm-auto d-flex flex-fill justify-content-center">
+                <button class="btn btn-primary p-0 mt-0 mb-1 mx-1" @onclick="ShuffleScales">Shuffle Scales</button>
+                <p class="mt-0 mb-1 mx-1">Scale count: @activeScales.Count</p>
+                <button class="btn btn-primary p-0 mt-0 mb-1 mx-1" @onclick="ClearSelectedNotes">Reset</button>
+            </div>
+
+            <div class="col col-sm-2"></div>
+        </div>
+    </div>
     <div class="row   justify-content-between">
         @if (activeScales.Count == 0)
         {
-                <div class="col p-2 text-center">
-                <p class="text-danger">No scales found that contain all selected notes!</p>
-                </div>
+            <div class="col p-2 text-center">
+            <p class="text-danger">No scales found that contain all selected notes!</p>
+            </div>
         }
         else
         {
-                @foreach (var sc in activeScales)
-                {
-                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-6 p-0">
-                        <ScaleCard scale=sc />
-                    </div>
-                }
+            @foreach (var sc in activeScales)
+            {
+            <div class="col-sm-12 col-xs-12 col-md-12 col-lg-6 p-1">
+                    <ScaleCard scale=sc />
+                </div>
+            }
         }
     </div>
 </div>
